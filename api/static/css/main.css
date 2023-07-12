@@ -1,20 +1,20 @@
 /* Color Variables */
 :root {
-    /* Tan Color Theme - Set as the default theme */
-    --primaryColor: #d2b48c;
-    --itemBackgroun: #f6f0e8;
+    /* White/Grey/Black Theme - Default theme */
+    --primaryColor: #f6f0e8;
+    --itemBackground: #808080;
     --textColor: #a87b00;
-    --readOnlyColor: #533e2d;
+    --readOnlyColor: #0a0a0a;
     --tableColor: #ac8048;
     --headerColor: #ffffff;
-    --tableItemBackground: #f6f0e8;
-    --buttonBackground: #f6f0e8;
+    --tableItemBackground: #808080;
+    --buttonBackground: #808080;
     --buttonText: #a87b00;
     --shiftColor: #fce17a;
-    --messageTextColor: #533e2d;
-    --focusText: #f6f0e8;
+    --messageTextColor: #0a0a0a;
+    --focusText: #808080;
     --highlightOpacity: brightness(90%);
-    --shiftIndication: #533e2d;
+    --shiftIndication: #0a0a0a;
     --linkColor: white;
 }
 
