@@ -4,7 +4,7 @@ import ctypes
 
 app = Flask(__name__)
 
-# the 2D list of the starting numbers in the sudoku 
+# the 2D list of the starting numbers in the sudokux
 play_list = []
 
 # boolean that is True if a Sudoku has been generated using
