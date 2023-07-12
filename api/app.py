@@ -117,7 +117,3 @@ def solution():
         return render_template('solution.html', solved_array = s.return_array())
     else:
         return render_template('menu.html')
-
-
-if __name__ == "__main__":
-    app.run(debug=True, port=7650)
