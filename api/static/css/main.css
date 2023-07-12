@@ -3,14 +3,14 @@
     /* White/Grey/Black Theme - Default theme */
     --primaryColor: #f6f0e8;
     --itemBackground: #808080;
-    --textColor: #a87b00;
+    --textColor: #fcfcfc;
     --readOnlyColor: #0a0a0a;
-    --tableColor: #ac8048;
+    --tableColor: #000000;
     --headerColor: #ffffff;
     --tableItemBackground: #808080;
     --buttonBackground: #808080;
-    --buttonText: #a87b00;
-    --shiftColor: #fce17a;
+    --buttonText: #4f4f4f;
+    --shiftColor: #424242;
     --messageTextColor: #0a0a0a;
     --focusText: #808080;
     --highlightOpacity: brightness(90%);
