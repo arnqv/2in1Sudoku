@@ -86,7 +86,7 @@ function changeTheme() {
 
         // change document CSS colors
         root.style.setProperty('--primaryColor', "#f6f0e8");
-        root.style.setProperty('--itemBackground', "#f6f0e8");
+        root.style.setProperty('--itemBackground', "#c5c5c5");
         root.style.setProperty('--textColor', "#0a0a0a");
         root.style.setProperty('--readOnlyColor', "#0a0a0a");
         root.style.setProperty('--tableColor', "#f6f0e8");
