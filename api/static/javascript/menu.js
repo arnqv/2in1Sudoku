@@ -102,7 +102,7 @@ function changeTheme() {
         root.style.setProperty('--linkColor', "#4f4f4f");
 
         // change table colors
-        root.style.setProperty('--color1', "#FFCCCC");
+        root.style.setProperty('--color1', "#f6f0e8");
         root.style.setProperty('--color2', "lightsalmon");
         root.style.setProperty('--color3', "#99FF99");
         root.style.setProperty('--color4', "#99FFFF");
