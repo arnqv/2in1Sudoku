@@ -71,7 +71,7 @@ function changeTheme() {
     // create a local variable "themeid" that stores which theme to set
     var themeid;
 
-    // if there is no theme stored in cache yet, set the default to the "tan" theme
+    // if there is no theme stored in cache yet, set the default to the "white" theme
     if (window.localStorage.getItem("storedTheme") == null) {
         themeid = "white";
     }
@@ -81,7 +81,7 @@ function changeTheme() {
         themeid = window.localStorage.getItem("storedTheme");
     }
 
-    // if the desired theme change is "tan", change CSS variables to the corresponding color palette
+    // if the desired theme change is "white", change CSS variables to the corresponding color palette
     if (themeid == "white") {
 
         // change document CSS colors
@@ -112,12 +112,12 @@ function changeTheme() {
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
 
-        // change play and solve images to the "tan" version
+        // change play and solve images to the "white" version
         document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/tan_play.png)";
         document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/tan_solve.png)";
 
-        // store the theme "tan" in local cache
-        window.localStorage.setItem("storedTheme", "tan");
+        // store the theme "white" in local cache
+        window.localStorage.setItem("storedTheme", "white");
     }
 
     // else if the desired theme change is "dark", change CSS variables to the corresponding color palette

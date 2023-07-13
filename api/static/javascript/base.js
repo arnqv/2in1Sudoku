@@ -148,8 +148,8 @@ function changeTheme() {
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeTan.png)";
 
-        // store the theme "tan" in local cache
-        window.localStorage.setItem("storedTheme", "tan");
+        // store the theme "white" in local cache
+        window.localStorage.setItem("storedTheme", "white");
 
     }
 
