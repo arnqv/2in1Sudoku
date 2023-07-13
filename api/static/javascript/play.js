@@ -1225,7 +1225,7 @@ function themeOption() {
     document.getElementById("changetheme").innerHTML = `
     <div id="themescontainer">
     <div class="themes" id="dark" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
-    <div class="themes" id="tan" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
+    <div class="themes" id="white" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="light" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="retro" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     </div>
@@ -1279,28 +1279,28 @@ function changeTheme() {
     // reset the shift indicator
     document.getElementById("shiftIndication").style = "background-color: none";
 
-    // if the desired theme change is "tan", change CSS variables to the corresponding color palette
-    if (themeid == "tan") {
+    // if the desired theme change is "white", change CSS variables to the corresponding color palette
+    if (themeid == "white") {
 
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "#d2b48c");
-        root.style.setProperty('--itemBackground', "#f6f0e8");
-        root.style.setProperty('--textColor', "#a87b00");
-        root.style.setProperty('--readOnlyColor', "#533e2d");
-        root.style.setProperty('--tableColor', "#ac8048");
-        root.style.setProperty('--headerColor', "#ffffff");
-        root.style.setProperty('--tableItemBackground', "#f6f0e8");
-        root.style.setProperty('--buttonBackground', "#f6f0e8");
-        root.style.setProperty('--buttonText', "#a87b00");
-        root.style.setProperty('--shiftColor', "#fce17a");
-        root.style.setProperty('--messageTextColor', "#533e2d");
-        root.style.setProperty('--focusText', "#f6f0e8");
+        root.style.setProperty('--primaryColor', "#f6f0e8");
+        root.style.setProperty('--itemBackground', "#808080");
+        root.style.setProperty('--textColor', "#0a0a0a");
+        root.style.setProperty('--readOnlyColor', "#0a0a0a");
+        root.style.setProperty('--tableColor', "#f6f0e8");
+        root.style.setProperty('--headerColor', "#0a0a0a");
+        root.style.setProperty('--tableItemBackground', "#808080");
+        root.style.setProperty('--buttonBackground', "#808080");
+        root.style.setProperty('--buttonText', "#4f4f4f");
+        root.style.setProperty('--shiftColor', "#4f4f4f");
+        root.style.setProperty('--messageTextColor', "#0a0a0a");
+        root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
-        root.style.setProperty('--shiftIndication', "#533e2d");
-        root.style.setProperty('--linkColor', "white");
+        root.style.setProperty('--shiftIndication', "#0a0a0a");
+        root.style.setProperty('--linkColor', "#4f4f4f");
 
         // change table colors
-        root.style.setProperty('--color1', "#FFCCCC");
+        root.style.setProperty('--color1', "#f6f0e8");
         root.style.setProperty('--color2', "lightsalmon");
         root.style.setProperty('--color3', "#99FF99");
         root.style.setProperty('--color4', "#99FFFF");
@@ -1313,8 +1313,8 @@ function changeTheme() {
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeTan.png)";
 
-        // store the theme "tan" in local cache
-        window.localStorage.setItem("storedTheme", "tan");
+        // store the theme "white" in local cache
+        window.localStorage.setItem("storedTheme", "white");
 
     }
 
