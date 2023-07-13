@@ -3,19 +3,19 @@
     /* White/Grey/Black Theme - Default theme */
     --primaryColor: #f6f0e8;
     --itemBackground: #808080;
-    --textColor: #fcfcfc;
+    --textColor: #0a0a0a;
     --readOnlyColor: #0a0a0a;
-    --tableColor: #000000;
-    --headerColor: #ffffff;
+    --tableColor: #f6f0e8;
+    --headerColor: #0a0a0a;
     --tableItemBackground: #808080;
     --buttonBackground: #808080;
     --buttonText: #4f4f4f;
-    --shiftColor: #424242;
+    --shiftColor: #4f4f4f;
     --messageTextColor: #0a0a0a;
     --focusText: #808080;
     --highlightOpacity: brightness(90%);
     --shiftIndication: #0a0a0a;
-    --linkColor: white;
+    --linkColor: #4f4f4f;
 }
 
 /* Document CSS */
@@ -354,7 +354,7 @@ div#dark {
     background: rgb(27,38,44);
     background: linear-gradient(180deg, rgba(27,38,44,1) 0%, rgba(34,104,151,1) 50%, rgba(187,225,250,1) 100%);
 }
-div#tan {
+div#white {
     background: rgb(168,123,0);
     background: linear-gradient(180deg, rgba(168,123,0,1) 0%, rgba(210,180,140,1) 30%, rgba(246,240,232,1) 100%);
 }
