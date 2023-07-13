@@ -86,7 +86,7 @@ function changeTheme() {
 
         // change document CSS colors
         root.style.setProperty('--primaryColor', "#f6f0e8");
-        root.style.setProperty('--itemBackground', "#808080");
+        root.style.setProperty('--itemBackground', "#f6f0e8");
         root.style.setProperty('--textColor', "#0a0a0a");
         root.style.setProperty('--readOnlyColor', "#0a0a0a");
         root.style.setProperty('--tableColor', "#f6f0e8");
@@ -102,8 +102,8 @@ function changeTheme() {
         root.style.setProperty('--linkColor', "#4f4f4f");
 
         // change table colors
-        root.style.setProperty('--color1', "#f6f0e8");
-        root.style.setProperty('--color2', "#f6f0e8");
+        root.style.setProperty('--color1', "#0a0a0a");
+        root.style.setProperty('--color2', "#0a0a0a");
         root.style.setProperty('--color3', "#f6f0e8");
         root.style.setProperty('--color4', "#f6f0e8");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));

@@ -1284,15 +1284,15 @@ function changeTheme() {
 
         // change document CSS colors
         root.style.setProperty('--primaryColor', "#f6f0e8");
-        root.style.setProperty('--itemBackground', "#808080");
+        root.style.setProperty('--itemBackground', "#f6f0e8");
         root.style.setProperty('--textColor', "#0a0a0a");
         root.style.setProperty('--readOnlyColor', "#0a0a0a");
         root.style.setProperty('--tableColor', "#f6f0e8");
         root.style.setProperty('--headerColor', "#0a0a0a");
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
-        root.style.setProperty('--buttonText', "#4f4f4f");
-        root.style.setProperty('--shiftColor', "#4f4f4f");
+        root.style.setProperty('--buttonText', "#0a0a0a");
+        root.style.setProperty('--shiftColor', "#0a0a0a");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -1300,13 +1300,13 @@ function changeTheme() {
         root.style.setProperty('--linkColor', "#4f4f4f");
 
         // change table colors
-        root.style.setProperty('--color1', "#f6f0e8");
-        root.style.setProperty('--color2', "lightsalmon");
-        root.style.setProperty('--color3', "#99FF99");
-        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color1', "#0a0a0a");
+        root.style.setProperty('--color2', "#0a0a0a");
+        root.style.setProperty('--color3', "#f6f0e8");
+        root.style.setProperty('--color4', "#f6f0e8");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "#99CCFF");
-        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color6', "#f6f0e8");
+        root.style.setProperty('--color7', "#f6f0e8");
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
 
