@@ -1224,7 +1224,7 @@ function toggleHighlightRcb() {
 function themeOption() {
     document.getElementById("changetheme").innerHTML = `
     <div id="themescontainer">
-    <div class="themes" id="dark" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
+    <div class="themes" id="cybergreen" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="white" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="light" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="retro" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
@@ -1319,18 +1319,17 @@ function changeTheme() {
     }
 
     // else if the desired theme change is "dark", change CSS variables to the corresponding color palette
-    else if (themeid == "dark") {
+    else if (themeid == "cybergreen") {
 
-        // change document CSS colors
-        root.style.setProperty('--primaryColor', "#1b262c");
-        root.style.setProperty('--itemBackground', "#226897");
-        root.style.setProperty('--textColor', "#bbe1fa");
+        root.style.setProperty('--primaryColor', "#0a0a0a");
+        root.style.setProperty('--itemBackground', "#c5c5c5");
+        root.style.setProperty('--textColor', "#04f700");
         root.style.setProperty('--readOnlyColor', "#000000");
-        root.style.setProperty('--tableColor', "#3282b8");
-        root.style.setProperty('--headerColor', "#3282b8");
+        root.style.setProperty('--tableColor', "#04f700");
+        root.style.setProperty('--headerColor', "#04f700");
         root.style.setProperty('--tableItemBackground', "#a1c4db");
-        root.style.setProperty('--buttonBackground', "#305a75");
-        root.style.setProperty('--buttonText', "#bbe1fa");
+        root.style.setProperty('--buttonBackground', "#4f4f4f");
+        root.style.setProperty('--buttonText', "#04f700");
         root.style.setProperty('--shiftColor', "#6f818a");
         root.style.setProperty('--messageTextColor', "#bbe1fa");
         root.style.setProperty('--focusText', "#226897");
@@ -1353,7 +1352,7 @@ function changeTheme() {
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeDark.png)";
 
         // store the theme "dark" in local cache
-        window.localStorage.setItem("storedTheme", "dark");
+        window.localStorage.setItem("storedTheme", "cybergreen");
     }
     
     // else if the desired theme change is "retro", change CSS variables to the corresponding color palette
