@@ -104,11 +104,11 @@ function changeTheme() {
         // change table colors
         root.style.setProperty('--color1', "#0a0a0a");
         root.style.setProperty('--color2', "#0a0a0a");
-        root.style.setProperty('--color3', "#f6f0e8");
-        root.style.setProperty('--color4', "#f6f0e8");
+        root.style.setProperty('--color3', "#0a0a0a");
+        root.style.setProperty('--color4', "#0a0a0a");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "#f6f0e8");
-        root.style.setProperty('--color7', "#f6f0e8");
+        root.style.setProperty('--color6', "#0a0a0a");
+        root.style.setProperty('--color7', "#0a0a0a");
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
 
