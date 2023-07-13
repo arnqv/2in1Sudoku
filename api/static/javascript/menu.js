@@ -93,8 +93,8 @@ function changeTheme() {
         root.style.setProperty('--headerColor', "#0a0a0a");
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
-        root.style.setProperty('--buttonText', "#4f4f4f");
-        root.style.setProperty('--shiftColor', "#4f4f4f");
+        root.style.setProperty('--buttonText', "#0a0a0a");
+        root.style.setProperty('--shiftColor', "#0a0a0a");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
