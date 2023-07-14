@@ -227,7 +227,7 @@ div.buttoncontainers {
 }
 
 /* Option/Mode Divs and Buttons CSS */
-button.buttons, button.menubutton, button.playbutton, button.difficultybutton, div.optiondivs, div.modedivs {
+button.buttons, button.menubutton, button.playbutton, button.diffbutton, div.optiondivs, div.modedivs {
     background-color: var(--buttonBackground);
     color: var(--buttonText);
     border: none;
@@ -360,7 +360,7 @@ div.themes {
     flex-direction: column;
     user-select: none;
 }
-div#dark {
+div#cybergreen {
     background: rgb(27,38,44);
     background: linear-gradient(180deg, rgba(27,38,44,1) 0%, rgba(34,104,151,1) 50%, rgba(187,225,250,1) 100%);
 }
