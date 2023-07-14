@@ -1,16 +1,16 @@
-// global variable (boolean) that indicates if the instructions/about us message should be opened or closed
+// tells us if instructions/additional info is opened or closed
 var showMessages = true;
 
 // global variable (Element) that represents the highest HTML element in the document tree
 var root = document.documentElement;
 
-// set the time in cache back to 0
+// resetting timer before each game
 window.localStorage.setItem("time", 0);
 
 
 document.onreadystatechange = function () {
     /**
-    * Alter the class of the body once the window has finished loading
+    * Making sure that body is being changed after all html/css has been loaded
     */
     if (document.readyState === "complete") {
         document.getElementById("body").className = "all-loaded";
@@ -18,25 +18,25 @@ document.onreadystatechange = function () {
 }
 
 /**
- * Changes the inner HTML of the "Play a Sudoku" div to display the two options the user can select from
+ * After User hit "Play!" button, next two buttons show up
  */
 function playOption() {
     document.getElementById("playcontainer").innerHTML = `
-    <button class="playbutton" onclick="chooseOption()">Choose a Sudoku</button>
+    <button class="playbutton" onclick="chooseOption()">Choose Difficulty</button>
     <button class="playbutton" onclick="location.href='/input_play'">Input a Sudoku</button>
     `;
 }
 
 /**
- * Changes the inner HTML of the "Choose a Sudoku" div to display the four options the user can select from
+ * Displays 4 Difficulties User can choose from (Easy, Medium, Hard, Insane)
  */
 function chooseOption() {
     document.getElementById("playcontainer").innerHTML = `
     <form action="/play" method="POST">
-    <button id="easy" name="easy" value="easy" type="submit" class="difficultybutton">Easy</button>
-    <button id="medium" name="medium" value="medium" type="submit" class="difficultybutton">Medium</button>
-    <button id="hard" name="hard" value="hard" type="submit" class="difficultybutton">Hard</button>
-    <button id="expert" name="expert" value="expert" type="submit" class="difficultybutton">Expert</button>
+    <button id="easy" name="easy" value="easy" type="submit" class="diffbutton">Easy</button>
+    <button id="medium" name="medium" value="medium" type="submit" class="diffbutton">Medium</button>
+    <button id="hard" name="hard" value="hard" type="submit" class="diffbutton">Hard</button>
+    <button id="insane" name="insane" value="insane" type="submit" class="diffbutton">Insane</button>
     </form>
     `;
 }
@@ -56,7 +56,7 @@ function themeOption() {
 }
 
 /**
- * If a theme has been selected, reverts the "Change Theme" div back to its original HTML
+ * Change Theme button resets to original button after user selects a theme
  */
 function revertChangeTheme() {
     document.getElementById("changetheme").innerHTML = `
@@ -239,7 +239,7 @@ function changeTheme() {
 }
 
 /**
- * Displays "Instructions" and "About Us" messages
+ * Displays "Instructions" and "Additional Info"
  */
 function messagesDisplay() {
 
@@ -255,7 +255,7 @@ function messagesDisplay() {
         document.getElementById("menuaboutdisplay").style.display = "block";
 
         // change the inner HTML to show a close option
-        document.getElementById("messages").innerHTML = "Close Instructions<br>and About Us";
+        document.getElementById("messages").innerHTML = "Close Information";
 
         // set "showMessages" to false
         showMessages = false;

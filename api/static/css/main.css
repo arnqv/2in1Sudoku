@@ -500,8 +500,9 @@ div#optionicons {
 div#timer {
     color: var(--shiftIndication);
     font-family: 'Montserrat', 'sans-serif';
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 6px;
+    font-weight: 900;
 }
 
 /* Check Overlay */
