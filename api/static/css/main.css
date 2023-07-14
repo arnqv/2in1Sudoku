@@ -104,7 +104,7 @@ div.grid-item {
     height: 50px;
     width: 50px;
     background-color: var(--itemBackground);
-    border: 3px solid var(--primaryColor);
+    border: 2px solid var(--primaryColor);
     padding: 0;
 }
 
@@ -145,30 +145,30 @@ a, a:visited {
 
 /* Column Borders CSS */
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n){
-    border-left: 5.5px var(--primaryColor) solid;
+    border-left: 5px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+6){
-    border-left: 4.2px var(--primaryColor)solid;
+    border-left: 4px var(--primaryColor)solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+3){
-    border-left: 4.2px var(--primaryColor) solid;
+    border-left: 4px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+1){
-    border-right: 5.5px var(--primaryColor) solid;
+    border-right: 5px var(--primaryColor) solid;
 }
 
 /* Row Borders CSS */
 div#grid-container div.grid-item:nth-child(n):nth-last-child(n+73){
-    border-top: 5.5px var(--primaryColor) solid;
+    border-top: 5px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n+55):nth-last-child(n+19){
-    border-top: 4.2px var(--primaryColor) solid;
+    border-top: 4px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n+73):nth-last-child(n){
-    border-bottom: 5.5px var(--primaryColor) solid;
+    border-bottom: 5px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n+28):nth-last-child(n+46){
-    border-top: 4.2px var(--primaryColor) solid;
+    border-top: 4px var(--primaryColor) solid;
 }
 
 /* Inputs CSS */
