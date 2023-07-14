@@ -171,7 +171,7 @@ div#grid-container div.grid-item:nth-child(n+28):nth-last-child(n+46){
     border-top: 4px var(--primaryColor) solid;
 }
 
-/* Inputs CSS */
+/* CSS Style for User Inputs */
 input {
     cursor: default;
 }
@@ -238,10 +238,12 @@ button.buttons, button.menubutton, button.playbutton, button.difficultybutton, d
     width: 200px;
     height: 45px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cabin', sans-serif;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s;
 }
+
 
 div.optiondivs, div.modedivs, div#shiftIndication, div#homesquare {
     display: flex;
@@ -259,7 +261,8 @@ div.optiondivs, div.modedivs, div#shiftIndication, div#homesquare {
 }
 
 button.buttons:focus, button.menubutton:focus, div.optiondivs:focus, div.modedivs:focus, button.playbutton:focus, button.difficultybutton:focus {
-    outline: none;
+    border: 3px solid var(--primaryColor);
+    outline: black;
 }
 
 div.modefocus, div.focusdivs {
@@ -334,10 +337,15 @@ div#themebutton {
     height: 100%;
     width: 100%;
     display: flex;
+    opacity: 0.7;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    transition: 0.3s;
     z-index: 4;
+}
+.themebutton:hover {
+    opacity: 1
 }
 div#themescontainer {
     display: flex;
@@ -373,17 +381,35 @@ div#retro {
 button.menubutton {
     width: 300px;
     margin: 10px;
+    opacity: 0.6;
+    transition: 0.3s;
 }
+.menubutton:hover {
+    opacity: 1;
+}
+
 button.playbutton {
+    opacity: 0.6;
+    transition: 0.3s;
     width: 175px;
     margin: 10px;
 }
+.playbutton:hover {
+    opacity: 1;
+}
+
 button.difficultybutton {
+    opacity: 0.6;
+    transition: 0.3s;
     width: 88px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 8px;
 }
+.difficultybutton:hover {
+    opacity: 1;
+}
+
 div#playcontainer {
     margin-top: 0px;
 }
@@ -473,6 +499,7 @@ div#optionicons {
 }
 div#timer {
     color: var(--shiftIndication);
+    font-family: 'Montserrat', 'sans-serif';
     font-size: 20px;
     margin-top: 6px;
 }
