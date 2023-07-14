@@ -48,10 +48,11 @@ h4 {
     text-decoration: underline;
     font-size: 18px;
 }
+/* styling body text to make sure it wraps in box */
 div#content {
-    display: flex;
     justify-content: center;
     text-align: center;
+    display: flex;
 }
 div.inline {
     display: inline-block;
@@ -87,8 +88,8 @@ div#outsidemode {
     margin-top: 0px;
 }
 
-/* Grid CSS */
-div#grid-container, div#instructionsdisplay, div#aboutdisplay, div#checkoverlay {
+/* Board CSS */
+div#grid-container, div#aboutdisplay, div#checkoverlay, div#instructionsdisplay {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
     margin: 0;
@@ -97,38 +98,38 @@ div#grid-container, div#instructionsdisplay, div#aboutdisplay, div#checkoverlay 
     padding: 0;
 }
 div.grid-item {
-    background-color: var(--itemBackground);
-    border: 1px solid var(--primaryColor);
-    padding: 0;
-    font-size: 20px;
+    font-size: 21px;
     text-align: center;
     margin: 0;
     height: 50px;
     width: 50px;
+    background-color: var(--itemBackground);
+    border: 3px solid var(--primaryColor);
+    padding: 0;
 }
 
-/* Instructions and About Overlays */
+/* Text in instructions and additional information boxes */
 div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menuaboutdisplay, div#checkoverlay {
-    display: none;
-    width: 460px;
+    font-size: 14px;
+    padding: 10px;
+    color: var(--messageTextColor);
     height: 456px;
     left: 0%;
     margin: auto;
-    border: 1px solid white;
-    font-size: 13.5px;
-    padding: 10px;
-    color: var(--messageTextColor);
+    border: 2px solid white;
     text-align: left;
     overflow: hidden;
     margin-bottom: 4px;
+    display: none;
+    width: 462px;
 }
 div#menuinstructionsdisplay, div#menuaboutdisplay {
     width: 403px;
-    height: 403px;
-    margin: 0;
     left: 0%;
     justify-content: center;
     padding: 10px;
+    height: 403px;
+    margin: 0;
 }
 div.header {
     font-weight: bold;
@@ -144,30 +145,30 @@ a, a:visited {
 
 /* Column Borders CSS */
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n){
-    border-left: 5px var(--primaryColor) solid;
+    border-left: 5.5px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+6){
-    border-left: 4px var(--primaryColor)solid;
+    border-left: 4.2px var(--primaryColor)solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+3){
-    border-left: 4px var(--primaryColor) solid;
+    border-left: 4.2px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n):nth-last-child(9n+1){
-    border-right: 5px var(--primaryColor) solid;
+    border-right: 5.5px var(--primaryColor) solid;
 }
 
 /* Row Borders CSS */
 div#grid-container div.grid-item:nth-child(n):nth-last-child(n+73){
-    border-top: 5px var(--primaryColor) solid;
-}
-div#grid-container div.grid-item:nth-child(n+28):nth-last-child(n+46){
-    border-top: 4px var(--primaryColor) solid;
+    border-top: 5.5px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n+55):nth-last-child(n+19){
-    border-top: 4px var(--primaryColor) solid;
+    border-top: 4.2px var(--primaryColor) solid;
 }
 div#grid-container div.grid-item:nth-child(n+73):nth-last-child(n){
-    border-bottom: 5px var(--primaryColor) solid;
+    border-bottom: 5.5px var(--primaryColor) solid;
+}
+div#grid-container div.grid-item:nth-child(n+28):nth-last-child(n+46){
+    border-top: 4.2px var(--primaryColor) solid;
 }
 
 /* Inputs CSS */
@@ -217,12 +218,12 @@ input::selection {
 }
 
 /* Button Containers CSS */
-div.buttoncontainers {
-    display: inline-block;
-}
 div.allbuttonscontainer {
     justify-content: center;
     text-align: center;
+}
+div.buttoncontainers {
+    display: inline-block;
 }
 
 /* Option/Mode Divs and Buttons CSS */
@@ -488,8 +489,8 @@ div#close {
 div#checkcenter {
     display: inline-block;
     align-items: center;
-    justify-content: center;
     align-content: center;
     flex-direction: column;
     margin-top: 30%;
+    justify-content: center;
 }
