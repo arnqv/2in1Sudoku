@@ -104,7 +104,7 @@ div.grid-item {
     height: 50px;
     width: 50px;
     background-color: var(--itemBackground);
-    border: 2px solid var(--primaryColor);
+    border: 3px solid var(--primaryColor);
     padding: 0;
 }
 
