@@ -23,7 +23,6 @@ document.onreadystatechange = function () {
 function playOption() {
     document.getElementById("playcontainer").innerHTML = `
     <button class="playbutton" onclick="chooseOption()">Choose Difficulty</button>
-    <button class="playbutton" onclick="location.href='/input_play'">Input a Sudoku</button>
     `;
 }
 

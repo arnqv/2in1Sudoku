@@ -17,16 +17,9 @@ def menu():
     has_gen = False
     return render_template('menu.html')
 
-"""
-@app.route('/input_play')
-def input_play():
-    return render_template('input_play.html')
-"""
-
-
-@app.route('/input_solve')
+@app.route('/input_solveown')
 def input_solve():
-    return render_template('input_play.html')
+    return render_template('input_solveown.html')
 
 
 @app.route('/play', methods=['POST', 'GET'])
@@ -53,7 +46,7 @@ def play():
             s = Sudoku(sudoku_grid_list)
 
             # if the POST request is from '/input_play"
-            if '/input_solve' in request.referrer:
+            if '/input_solveown' in request.referrer:
                 play_list = s.return_array()
 
                 # renders the play.html file
