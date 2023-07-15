@@ -121,6 +121,7 @@ function changeTheme() {
 
     // else if the desired theme change is "cybergreen", change CSS variables to the corresponding color palette
     else if (themeid == "cybergreen") {
+        
 
         // change document CSS colors
         root.style.setProperty('--primaryColor', "#0a0a0a");
