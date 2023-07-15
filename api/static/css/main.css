@@ -34,6 +34,9 @@ body {
     height: 50%;
 }
 */
+body.all-loaded {
+    opacity: 1;
+}
 body {
     background: linear-gradient(-45deg, --buttonText, --buttonText, --buttonText, --linkColor) !important;
     background-size: 400% 400% !important;
