@@ -34,11 +34,12 @@ body {
     height: 50%;
 }
 */
+
 body.all-loaded {
     opacity: 1;
 }
 body {
-    background-color: linear-gradient(-45deg, --buttonText, --buttonText, --buttonText, --linkColor) !important;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) !important;
     background-size: 400% 400% !important;
     animation: gradient 15s ease infinite !important;
     height: 100vh !important;
