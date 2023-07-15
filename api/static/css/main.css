@@ -41,7 +41,7 @@ body.all-loaded {
 body {
     background: linear-gradient(-45deg, #0a0a0a, #c5c5c5, #0a0a0a, #0a0a0a);
     background-size: 400% 400%;
-    animation: gradient 14s ease infinite;
+    animation: gradient 17.5s ease infinite;
     height: 100vh;
   } 
   @keyframes gradient {
