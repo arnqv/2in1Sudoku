@@ -39,7 +39,7 @@ body.all-loaded {
     opacity: 1;
 }
 body {
-    background: linear-gradient(-45deg, var(--primaryColor), var(--textcolor), var(--buttonBackground), var(--primaryColor));
+    background: linear-gradient(-45deg, #0a0a0a, #c5c5c5, #f6f0e8, #0a0a0a);
     background-size: 400% 400%;
     animation: gradient 13s ease infinite;
     height: 100vh;
