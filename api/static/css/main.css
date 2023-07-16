@@ -16,6 +16,9 @@
     --highlightOpacity: brightness(90%);
     --shiftIndication: #0a0a0a;
     --linkColor: #4f4f4f;
+    --buttonColor: #f6f0e8;
+    --darkerButtonColor: #595959;
+    --lighterButtonColor: #f6f0e8
 }
 
 /* Primary CSS */
@@ -421,20 +424,20 @@ button.playbutton {
 }
 
 @-webkit-keyframes pulseText {
-    0% {text-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7);}
-    100% {text-shadow: 0px 0px 22px rgba(0, 255, 0, 1);}
+    0% {text-shadow: 0px 0px 8px var(--buttonColor);}
+    100% {text-shadow: 0px 0px 22px var(--buttonColor);}
   }
   @-moz-keyframes pulseText {
-    0% {text-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7);}
-    100% {text-shadow: 0px 0px 22px rgba(0, 255, 0, 1);}
+    0% {text-shadow: 0px 0px 8px var(--buttonColor);}
+    100% {text-shadow: 0px 0px 22px var(--buttonColor);}
   }
   @-o-keyframes pulseText {
-    0% {text-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7);}
-    100% {text-shadow: 0px 0px 22px rgba(0, 255, 0, 1);}
+    0% {text-shadow: 0px 0px 8px var(--buttonColor);}
+    100% {text-shadow: 0px 0px 22px var(--buttonColor);}
   }
   @keyframes pulseText {
-    0% {text-shadow: 0px 0px 8px rgba(0, 255, 0, 0.7);}
-    100% {text-shadow: 0px 0px 22px rgba(0, 255, 0, 1);}
+    0% {text-shadow: 0px 0px 8px var(--buttonColor);}
+    100% {text-shadow: 0px 0px 22px var(--buttonColor);}
   }
   
   .pulseText {
@@ -461,7 +464,7 @@ button.playbutton {
     border: 0px;
     width: 300px;
     margin: 10px;
-    color: #6f6;
+    color: var(--darkerButtonColor);
     font-family: 'Orbitron', Verdana, sans-serif;
     font-size: 2.2em;
     background: none;
@@ -469,7 +472,7 @@ button.playbutton {
 
   .pulseText:hover
 {
-  color: #afa;
+  color: var(--lighterButtonColor);
   cursor: pointer;
   
 }

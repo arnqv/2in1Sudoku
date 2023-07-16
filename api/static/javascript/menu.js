@@ -99,6 +99,10 @@ function changeTheme() {
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
         root.style.setProperty('--shiftIndication', "#0a0a0a");
         root.style.setProperty('--linkColor', "#4f4f4f");
+        root.style.setProperty('--buttonColor', "#f6f0e8");
+        root.style.setProperty('--darkerButtonColor', "#595959");
+        root.style.setProperty('--lighterButtonColor', "#f6f0e8");
+
 
         // change table colors
         root.style.setProperty('--color1', "#0a0a0a");
@@ -139,6 +143,9 @@ function changeTheme() {
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
         root.style.setProperty('--shiftIndication', "#bbe1fa");
         root.style.setProperty('--linkColor', "orange");
+        root.style.setProperty('--buttonColor', "rgba(0, 255, 0, 0.7)");
+        root.style.setProperty('--darkerButtonColor', "rgba(0, 255, 0, 1)");
+        root.style.setProperty('--lighterButtonColor', " #afa");
 
         // change table colors
         root.style.setProperty('--color1', "#990000");
