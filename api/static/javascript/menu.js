@@ -280,7 +280,7 @@ function messagesDisplay() {
         document.getElementById("solveimage").style.display = "block";
 
         // change the inner HTML to show an open option
-        document.getElementById("messages").innerHTML = "Instructions<br>and About Us";
+        document.getElementById("messages").innerHTML = "Instructions";
 
         // set "showMessages" to true
         showMessages = true;
