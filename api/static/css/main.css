@@ -615,6 +615,7 @@ div#checkcenter {
 
 /* Underline Animation Button */
 .underlineButton{
+    padding-top: 20px;
     position: relative;
     text-decoration: none;
     font-family: 'Poppins',sans-serif;
