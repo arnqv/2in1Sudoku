@@ -430,7 +430,7 @@ button.playbutton {
     padding: 10px 30px;
     transition: 0.5s;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2.2em;
  }
 .glowButton:hover {
     background-color: var(--buttonColor);
