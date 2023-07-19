@@ -48,8 +48,8 @@ function themeOption() {
     <div id="themescontainer">
     <div class="themes" id="cybergreen" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     <div class="themes" id="white" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
-    <div class="themes" id="light" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
-    <div class="themes" id="retro" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
+    <div class="themes" id="red" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
+    <div class="themes" id="blue" onclick="window.localStorage.setItem('storedTheme', this.id); changeTheme(); revertChangeTheme()"></div>
     </div>
     `;
 }
@@ -170,7 +170,7 @@ function changeTheme() {
     }
 
     // else if the desired theme change is "retro", change CSS variables to the corresponding color palette
-    else if (themeid == "retro") {
+    else if (themeid == "red") {
 
         // change document CSS colors
         root.style.setProperty('--primaryColor', "#111f4d");
@@ -188,6 +188,11 @@ function changeTheme() {
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
         root.style.setProperty('--shiftIndication', "#e43a19");
         root.style.setProperty('--linkColor', "#e43a19");
+        root.style.setProperty('--buttonColor', "rgba(255, 17, 0)");
+        root.style.setProperty('--darkerButtonColor', "rgba(0, 255, 0, 1)");
+        root.style.setProperty('--lighterButtonColor', "rgba(250, 124, 115)");
+        root.style.setProperty('--bodyTextColor', "rgba(250, 124, 115)");
+        root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
 
         // change table colors
         root.style.setProperty('--color1', "#FFCCCC");
@@ -205,7 +210,7 @@ function changeTheme() {
         document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/retro_solve.png)";
 
         // store the theme "retro" in local cache
-        window.localStorage.setItem("storedTheme", "retro");
+        window.localStorage.setItem("storedTheme", "red");
     }
 
     // else the desired theme change is "light", change CSS variables to the corresponding color palette
@@ -227,6 +232,11 @@ function changeTheme() {
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
         root.style.setProperty('--shiftIndication', "#28595c");
         root.style.setProperty('--linkColor', "#b266ff");
+        root.style.setProperty('--buttonColor', "rgba(5, 43, 255)");
+        root.style.setProperty('--darkerButtonColor', "rgba(0, 255, 0, 1)");
+        root.style.setProperty('--lighterButtonColor', "rgba(120, 140, 255)");
+        root.style.setProperty('--bodyTextColor', "rgba(120, 140, 255)");
+        root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
 
         // change table colors
         root.style.setProperty('--color1', "#FF9999");
@@ -244,7 +254,7 @@ function changeTheme() {
         document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/light_solve.png)";
 
         // store the theme "light" in local cache
-        window.localStorage.setItem("storedTheme", "light");
+        window.localStorage.setItem("storedTheme", "blue");
     }
 }
 
