@@ -101,9 +101,9 @@ function changeTheme() {
         root.style.setProperty('--linkColor', "#4f4f4f");
         root.style.setProperty('--buttonColor', "#f6f0e8");
         root.style.setProperty('--darkerButtonColor', "#595959");
-        root.style.setProperty('--lighterButtonColor', "#f6f0e8");
+        root.style.setProperty('--lighterButtonColor', "#7f7f7f;");
         root.style.setProperty('--bodyTextColor', "white");
-
+        root.style.setProperty('--underlineColor', "white");
 
         // change table colors
         root.style.setProperty('--color1', "#0a0a0a");
@@ -146,8 +146,9 @@ function changeTheme() {
         root.style.setProperty('--linkColor', "orange");
         root.style.setProperty('--buttonColor', "rgba(0, 255, 0, 0.7)");
         root.style.setProperty('--darkerButtonColor', "rgba(0, 255, 0, 1)");
-        root.style.setProperty('--lighterButtonColor', " #afa");
+        root.style.setProperty('--lighterButtonColor', "#8cff8a");
         root.style.setProperty('--bodyTextColor', "#8cff8a");
+        root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
 
         // change table colors
         root.style.setProperty('--color1', "#990000");
