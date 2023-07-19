@@ -369,8 +369,8 @@ div#themescontainer {
 }
 div.themes {
     flex: 1; 
-    width: 41;
-    height: 49px;
+    width: 36px;
+    height: 27px;
     display: flex;
     justify-content: center;
     align-content: center;
