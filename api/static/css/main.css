@@ -21,8 +21,9 @@
     --linkColor: #4f4f4f;
     --buttonColor: #f6f0e8;
     --darkerButtonColor: #595959;
-    --lighterButtonColor: #f6f0e8;
+    --lighterButtonColor: #7f7f7f;
     --bodyTextColor: #8cff8a;
+    --underlineColor: 
 }
 
 /* Primary CSS */
@@ -424,8 +425,8 @@ button.playbutton {
  }
 .glowButton{
     position: relative;
-    background: white;
-    color: white;
+    background: var(--lighterButtonColor);
+    color: var(--lighterButtonColor);
     text-decoration: none;
     letter-spacing: 0.1em;
     font-weight: 400;
@@ -628,7 +629,7 @@ div#checkcenter {
 .underlineButton:after{
     content: "";
     position: absolute;
-    background-color: var(--buttonColor);
+    background-color: var(--underlineColor);
     height: 3px;
     width: 0;
     left: 0;
