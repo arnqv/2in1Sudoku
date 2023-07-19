@@ -425,8 +425,8 @@ button.playbutton {
  }
 .glowButton{
     position: relative;
-    background: var(--lighterButtonColor);
-    color: var(--lighterButtonColor);
+    background: var(--bodyTextColor);
+    color: var(--bodyTextColor);
     text-decoration: none;
     letter-spacing: 0.1em;
     font-weight: 400;
