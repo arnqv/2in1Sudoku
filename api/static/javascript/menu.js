@@ -102,6 +102,7 @@ function changeTheme() {
         root.style.setProperty('--buttonColor', "#f6f0e8");
         root.style.setProperty('--darkerButtonColor', "#595959");
         root.style.setProperty('--lighterButtonColor', "#f6f0e8");
+        root.style.setProperty('--bodyTextColor', "white");
 
 
         // change table colors
