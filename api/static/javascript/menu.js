@@ -146,6 +146,7 @@ function changeTheme() {
         root.style.setProperty('--buttonColor', "rgba(0, 255, 0, 0.7)");
         root.style.setProperty('--darkerButtonColor', "rgba(0, 255, 0, 1)");
         root.style.setProperty('--lighterButtonColor', " #afa");
+        root.style.setProperty('--bodyTextColor', "#8cff8a");
 
         // change table colors
         root.style.setProperty('--color1', "#990000");
