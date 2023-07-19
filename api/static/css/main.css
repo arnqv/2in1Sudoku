@@ -37,7 +37,7 @@ body.all-loaded {
     opacity: 1;
 }
 body {
-    background: linear-gradient(-45deg, #0a0a0a, #595959, #0a0a0a, #0a0a0a);
+    background: linear-gradient(-45deg, #0a0a0a, #1b1b1b, #0a0a0a, #252525);
     background-size: 400% 400%;
     animation: gradient 17.5s ease infinite;
     height: 100vh;
