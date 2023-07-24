@@ -646,19 +646,19 @@ div#checkcenter {
 /* Pulse Text for Difficulty Buttons*/
 @-webkit-keyframes pulseText {
   0% {text-shadow: 0px 0px 8px rgba(0, 0, 0, 0);}
-  100% {text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.7);}
+  100% {text-shadow: 0px 0px 22px var(--bodyTextColor);}
 }
 @-moz-keyframes pulseText {
   0% {text-shadow: 0px 0px 8px rgba(0, 0, 0, 0);}
-  100% {text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.7);}
+  100% {text-shadow: 0px 0px 22px var(--bodyTextColor);}
 }
 @-o-keyframes pulseText {
   0% {text-shadow: 0px 0px 8px rgba(0, 0, 255, 0);}
-  100% {text-shadow: 0px 0px 22px rgba(0, 0, 155, 0.7);}
+  100% {text-shadow: 0px 0px 22px var(--bodyTextColor);}
 }
 @keyframes pulseText {
   0% {text-shadow: 0px 0px 8px rgba(0, 0, 155, 0);}
-  100% {text-shadow: 0px 0px 22px rgba(0, 0, 20, 0.7);}
+  100% {text-shadow: 0px 0px 22px var(--bodyTextColor);}
 }
 
 .pulseText {
