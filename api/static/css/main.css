@@ -380,19 +380,19 @@ div.themes {
 
 div#cybergreen {
     background: #04f700;
-    background: linear-gradient(180deg, #04f700 0%, #94ff92 50%, #000000 100%);
+    background: linear-gradient(180deg, #04f700 0%, #027600 50%, #012b00 100%);
 }
 div#white {
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(135, 135, 135) 50%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(135, 135, 135) 50%, rgb(53, 53, 53) 100%);
 }
 div#red {
-    background: rgba(255, 17, 0);
-    background: linear-gradient(180deg, rgba(255, 17, 0) 0%, rgb(255, 141, 133) 50%, rgb(0, 0, 0) 100%);
+    background: rgb(238, 145, 255);
+    background: linear-gradient(180deg, rgb(238, 145, 255) 0%, rgb(247, 203, 255) 50%, rgb(236, 245, 250) 100%);
 }
 div#blue {
     background: rgb(17, 169, 45);
-    background: linear-gradient(180deg, rgba(5, 43, 255) 0%, rgb(109, 131, 255) 50%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(27,38,44,1) 0%, rgba(34,104,151,1) 50%, rgba(187,225,250,1) 100%);
 }
 
 /* Menu CSS */
@@ -642,4 +642,56 @@ div#checkcenter {
 .underlineButton:hover:after{
     width: 100%;
 }
- 
+
+/* Pulse Text for Difficulty Buttons*/
+@-webkit-keyframes pulseText {
+  0% {text-shadow: 0px 0px 8px rgba(0, 0, 0, 0);}
+  100% {text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.7);}
+}
+@-moz-keyframes pulseText {
+  0% {text-shadow: 0px 0px 8px rgba(0, 0, 0, 0);}
+  100% {text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.7);}
+}
+@-o-keyframes pulseText {
+  0% {text-shadow: 0px 0px 8px rgba(0, 0, 255, 0);}
+  100% {text-shadow: 0px 0px 22px rgba(0, 0, 155, 0.7);}
+}
+@keyframes pulseText {
+  0% {text-shadow: 0px 0px 8px rgba(0, 0, 155, 0);}
+  100% {text-shadow: 0px 0px 22px rgba(0, 0, 20, 0.7);}
+}
+
+.pulseText {
+  color: var(--bodyTextColor);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  background: none;
+  
+  -webkit-animation-name: pulseText;
+  -moz-animation-name: pulseText;
+  -o-animation-name: pulseText;
+  animation-name: pulseText;
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  border: 0px;
+}
+
+.pulseText:hover {
+  color: var(--lighterButtonColor);
+  cursor: pointer;
+}

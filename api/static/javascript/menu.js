@@ -22,7 +22,7 @@ document.onreadystatechange = function () {
  */
 function playOption() {
     document.getElementById("playcontainer").innerHTML = `
-    <button class="playbutton" onclick="chooseOption()">Choose Difficulty</button>
+    <button id="menuplay" class="pulseText" style = "position:absolute; left:152px; top:270px; font-size: 1.9em;" onclick="chooseOption()"><span>Choose Difficulty</span><i></i></button>
     `;
 }
 
@@ -299,3 +299,14 @@ function messagesDisplay() {
         showMessages = true;
     }
 }
+
+const optionMenu = document.querySelector(".select-menu"),
+       selectBtn = optionMenu.querySelector(".select-btn"),
+       options = optionMenu.querySelectorAll(".option"),
+       sBtn_text = optionMenu.querySelector(".sBtn-text");
+selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));       
+options.forEach(option =>{
+    option.addEventListener("click", ()=>{
+        optionMenu.classList.remove("active");
+    });
+});
