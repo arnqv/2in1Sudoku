@@ -692,6 +692,6 @@ div#checkcenter {
 }
 
 .pulseText:hover {
-  color: var(--lighterButtonColor);
+  color: var(--bodyTextColor);
   cursor: pointer;
 }
