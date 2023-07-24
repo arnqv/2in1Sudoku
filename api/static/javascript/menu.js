@@ -22,7 +22,7 @@ document.onreadystatechange = function () {
  */
 function playOption() {
     document.getElementById("playcontainer").innerHTML = `
-    <button id="menuplay" class="pulseText" style = "position:absolute; left:152px; top:270px; font-size: 1.9em;" onclick="chooseOption()"><span>Choose Difficulty</span><i></i></button>
+    <button id="menuplay" class="pulseText" style = "position:absolute; left:130px; top:270px; font-size: 1.9em;" onclick="chooseOption()"><span>Choose Difficulty</span><i></i></button>
     `;
 }
 
