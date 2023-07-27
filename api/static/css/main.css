@@ -117,13 +117,13 @@ div#grid-container, div#aboutdisplay, div#checkoverlay, div#instructionsdisplay 
     padding: 0;
 }
 div.grid-item {
-    font-size: 21px;
+    font-size: 20.5px;
     text-align: center;
     margin: 0;
     height: 50px;
     width: 50px;
     background-color: var(--itemBackground);
-    border: 3px solid var(--primaryColor);
+    border: 1px solid var(--primaryColor);
     padding: 0;
 }
 
