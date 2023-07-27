@@ -1340,10 +1340,10 @@ function changeTheme() {
         // change table colors
         root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
         root.style.setProperty('--color2', "rgba(209, 255, 219)");
-        root.style.setProperty('--color3', "#009900");
-        root.style.setProperty('--color4', "#009999");
+        root.style.setProperty('--color3', "rgba(209, 255, 219)");
+        root.style.setProperty('--color4', "rgba(209, 255, 219)");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "darkslategrey");
+        root.style.setProperty('--color6', "rgba(209, 255, 219)");
         root.style.setProperty('--color7', "mediumpurple");
         root.style.setProperty('--color8', "#999900");
         root.style.setProperty('--color9', "#CC0066");
