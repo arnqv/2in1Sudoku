@@ -1344,9 +1344,9 @@ function changeTheme() {
         root.style.setProperty('--color4', "rgba(209, 255, 219)");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
         root.style.setProperty('--color6', "rgba(209, 255, 219)");
-        root.style.setProperty('--color7', "mediumpurple");
-        root.style.setProperty('--color8', "#999900");
-        root.style.setProperty('--color9', "#CC0066");
+        root.style.setProperty('--color7', "rgba(209, 255, 219)");
+        root.style.setProperty('--color8', "rgba(209, 255, 219)");
+        root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeDark.png)";

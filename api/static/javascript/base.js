@@ -172,16 +172,16 @@ function changeTheme() {
         root.style.setProperty('--shiftIndication', "#bbe1fa");
         root.style.setProperty('--linkColor', "orange");
 
-        // change table colors
+        //Change table colors
         root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
         root.style.setProperty('--color2', "rgba(209, 255, 219)");
         root.style.setProperty('--color3', "rgba(209, 255, 219)");
         root.style.setProperty('--color4', "rgba(209, 255, 219)");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
         root.style.setProperty('--color6', "rgba(209, 255, 219)");
-        root.style.setProperty('--color7', "mediumpurple");
-        root.style.setProperty('--color8', "#999900");
-        root.style.setProperty('--color9', "#CC0066");
+        root.style.setProperty('--color7', "rgba(209, 255, 219)");
+        root.style.setProperty('--color8', "rgba(209, 255, 219)");
+        root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeDark.png)";

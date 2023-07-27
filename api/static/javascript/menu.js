@@ -151,15 +151,15 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
 
         // change table colors
-        root.style.setProperty('--color1', "rgba(209, 255, 219)"); //does nothing
-        root.style.setProperty('--color2', "rgba(209, 255, 219)"); //does nothing
-        root.style.setProperty('--color3', "rgba(209, 255, 219)"); //check
-        root.style.setProperty('--color4', "#009999");
+        root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
+        root.style.setProperty('--color2', "rgba(209, 255, 219)");
+        root.style.setProperty('--color3', "rgba(209, 255, 219)");
+        root.style.setProperty('--color4', "rgba(209, 255, 219)");
         root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "darkslategrey");
-        root.style.setProperty('--color7', "mediumpurple");
-        root.style.setProperty('--color8', "#999900");
-        root.style.setProperty('--color9', "#CC0066");
+        root.style.setProperty('--color6', "rgba(209, 255, 219)");
+        root.style.setProperty('--color7', "rgba(209, 255, 219)");
+        root.style.setProperty('--color8', "rgba(209, 255, 219)");
+        root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         // change play and solve images to the "dark" version
         document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/dark_play.png)";
