@@ -118,7 +118,7 @@ div#grid-container, div#aboutdisplay, div#checkoverlay, div#instructionsdisplay 
 }
 div.grid-item {
     font-size: 20.5px;  
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 200;
     text-align: center;
     margin: 0;
