@@ -1323,7 +1323,7 @@ function changeTheme() {
 
         root.style.setProperty('--primaryColor', "rgba(0, 158, 0)"); //board line color
         root.style.setProperty('--itemBackground', "rgba(0, 0, 0)"); //square in each board color
-        root.style.setProperty('--textColor', "#8cff8a"); //button text color??
+        root.style.setProperty('--textColor', "rgba(209, 255, 219)"); //button text color??
         root.style.setProperty('--readOnlyColor', "#000000");
         root.style.setProperty('--tableColor', "#04f700");
         root.style.setProperty('--headerColor', "#04f700");
