@@ -1321,8 +1321,8 @@ function changeTheme() {
     // else if the desired theme change is "dark", change CSS variables to the corresponding color palette
     else if (themeid == "cybergreen") {
 
-        root.style.setProperty('--primaryColor', "#0a0a0a");
-        root.style.setProperty('--itemBackground', "rgba(209, 255, 219)");
+        root.style.setProperty('--primaryColor', "rgba(255, 17, 0)");
+        root.style.setProperty('--itemBackground', "rgba(0, 0, 0)");
         root.style.setProperty('--textColor', "#04f700");
         root.style.setProperty('--readOnlyColor', "#000000");
         root.style.setProperty('--tableColor', "#04f700");
