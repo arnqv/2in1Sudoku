@@ -151,7 +151,7 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
 
         // change table colors
-        root.style.setProperty('--color1', "#990000");
+        root.style.setProperty('--color1', "rgba(209, 255, 219)");
         root.style.setProperty('--color2', "#1e5301");
         root.style.setProperty('--color3', "#009900");
         root.style.setProperty('--color4', "#009999");
