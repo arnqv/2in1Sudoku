@@ -32,10 +32,10 @@ function playOption() {
 function chooseOption() {
     document.getElementById("playcontainer").innerHTML = `
     <form action="/play" method="POST">
-    <button id="easy" name="easy" value="easy" type="submit" class="diffbutton">Easy</button>
-    <button id="medium" name="medium" value="medium" type="submit" class="diffbutton">Medium</button>
-    <button id="hard" name="hard" value="hard" type="submit" class="diffbutton">Hard</button>
-    <button id="insane" name="insane" value="insane" type="submit" class="diffbutton">Insane</button>
+    <button id="easy" class = "pulseText" style = "position:absolute; left:180px; top:310px; font-size: 1.9em;" name="easy" value="easy" type="submit" class="diffbutton">Easy</button>
+    <button id="medium" class = "pulseText" name="medium" value="medium" style = "position:absolute; left:180px; top:370px; font-size: 1.9em;" type="submit" class="diffbutton">Medium</button>
+    <button id="hard" class = "pulseText" style = "position:absolute; left:180px; top:430px; font-size: 1.9em;" name="hard" value="hard" type="submit" class="diffbutton">Hard</button>
+    <button id="insane" class = "pulseText" name="insane" style = "position:absolute; left:180px; top:490px; font-size: 1.9em;" value="insane" type="submit" class="diffbutton">Insane</button>
     </form>
     `;
 }
