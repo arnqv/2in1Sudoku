@@ -1322,7 +1322,7 @@ function changeTheme() {
     else if (themeid == "cybergreen") {
 
         root.style.setProperty('--primaryColor', "#0a0a0a");
-        root.style.setProperty('--itemBackground', "#c5c5c5");
+        root.style.setProperty('--itemBackground', "rgba(209, 255, 219)");
         root.style.setProperty('--textColor', "#04f700");
         root.style.setProperty('--readOnlyColor', "#000000");
         root.style.setProperty('--tableColor', "#04f700");
