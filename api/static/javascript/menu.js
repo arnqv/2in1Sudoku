@@ -163,7 +163,7 @@ function changeTheme() {
 
         // change play and solve images to the "dark" version
         document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/greensudoku.png)";
-        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/dark_solve.png)";
+        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/greenfullsudoku.png)";
 
         // store the theme "dark" in local cache
         window.localStorage.setItem("storedTheme", "cybergreen");
