@@ -193,10 +193,10 @@ function changeTheme() {
     else if (themeid == "red") {
 
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "#111f4d");
-        root.style.setProperty('--itemBackground', "#F3ECE7");
-        root.style.setProperty('--textColor', "#e43a19");
-        root.style.setProperty('--readOnlyColor', "#020205");
+        root.style.setProperty('--primaryColor', "rgb(252, 0, 0)");
+        root.style.setProperty('--itemBackground', "rgba(0, 0, 0)");
+        root.style.setProperty('--textColor', "rgba(250, 124, 115)");
+        root.style.setProperty('--readOnlyColor', "rgba(250, 124, 115)");
         root.style.setProperty('--tableColor', "#e43a19");
         root.style.setProperty('--headerColor', "#e43a19");
         root.style.setProperty('--tableItemBackground', "#f2f4f7");
