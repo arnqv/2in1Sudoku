@@ -156,10 +156,10 @@ function changeTheme() {
     // else if the desired theme change is "dark", change CSS variables to the corresponding color palette
     else if (themeid == "cybergreen") {
 
-        root.style.setProperty('--primaryColor', "#0a0a0a");
-        root.style.setProperty('--itemBackground', "#c5c5c5");
-        root.style.setProperty('--textColor', "#04f700");
-        root.style.setProperty('--readOnlyColor', "#000000");
+        root.style.setProperty('--primaryColor', "rgba(0, 158, 0)"); //board line color
+        root.style.setProperty('--itemBackground', "rgba(0, 0, 0)"); //square in each board color
+        root.style.setProperty('--textColor', "rgba(209, 255, 219)"); //button text color??
+        root.style.setProperty('--readOnlyColor', "rgba(209, 255, 219)");
         root.style.setProperty('--tableColor', "#04f700");
         root.style.setProperty('--headerColor', "#04f700");
         root.style.setProperty('--tableItemBackground', "#a1c4db");
