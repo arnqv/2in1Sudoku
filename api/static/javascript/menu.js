@@ -117,8 +117,8 @@ function changeTheme() {
         root.style.setProperty('--color9', "#FF99CC");
 
         // change play and solve images to the "white" version
-        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/tan_play.png)";
-        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/tan_solve.png)";
+        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/whitesudoku.png)";
+        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/whitefullsudoku.png)";
 
         // store the theme "white" in local cache
         window.localStorage.setItem("storedTheme", "white");
