@@ -1283,7 +1283,7 @@ function changeTheme() {
     if (themeid == "white") {
 
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "rgba(161, 159, 159)"); //board line color
+        root.style.setProperty('--primaryColor', "rgba(130, 129, 129)"); //board line color
         root.style.setProperty('--itemBackground',"rgba(0, 0, 0)"); //square color
         root.style.setProperty('--textColor', "#f6f0e8"); 
         root.style.setProperty('--readOnlyColor', "rgba(199, 197, 197)");
