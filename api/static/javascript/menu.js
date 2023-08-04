@@ -162,7 +162,7 @@ function changeTheme() {
         root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         // change play and solve images to the "dark" version
-        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/dark_play.png)";
+        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/greensudoku.png)";
         document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/dark_solve.png)";
 
         // store the theme "dark" in local cache
