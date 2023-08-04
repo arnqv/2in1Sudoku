@@ -232,14 +232,13 @@ function changeTheme() {
         window.localStorage.setItem("storedTheme", "red");
     }
 
-    // else the desired theme change is "light", change CSS variables to the corresponding color palette
+    // if theme is blue
     else {
-
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "#add2c9");
-        root.style.setProperty('--itemBackground', "#f1ebeb");
-        root.style.setProperty('--textColor', "#5ea3a3");
-        root.style.setProperty('--readOnlyColor', "#28595c");
+        root.style.setProperty('--primaryColor', "rgba(0, 50, 252)");
+        root.style.setProperty('--itemBackground', "rgba(0,0,0)");
+        root.style.setProperty('--textColor', "rgba(120, 140, 255)");
+        root.style.setProperty('--readOnlyColor', "rgba(120, 140, 255)");
         root.style.setProperty('--tableColor', "#28595c");
         root.style.setProperty('--headerColor', "#28595c");
         root.style.setProperty('--tableItemBackground', "#62a7a1");

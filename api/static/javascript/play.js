@@ -1279,7 +1279,7 @@ function changeTheme() {
     // reset the shift indicator
     document.getElementById("shiftIndication").style = "background-color: none";
 
-    // if the desired theme change is "white", change CSS variables to the corresponding color palette
+    // if theme is white
     if (themeid == "white") {
 
         // change document CSS colors
@@ -1313,12 +1313,11 @@ function changeTheme() {
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeTan.png)";
 
-        // store the theme "white" in local cache
         window.localStorage.setItem("storedTheme", "white");
 
     }
 
-    // else if the desired theme change is "dark", change CSS variables to the corresponding color palette
+    // if theme is green
     else if (themeid == "cybergreen") {
 
         root.style.setProperty('--primaryColor', "rgba(0, 158, 0)"); //board line color
@@ -1351,11 +1350,10 @@ function changeTheme() {
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeDark.png)";
 
-        // store the theme "dark" in local cache
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
     
-    // else if the desired theme change is "retro", change CSS variables to the corresponding color palette
+    // if theme is red
     else if (themeid == "red") {
 
         // change document CSS colors
@@ -1394,17 +1392,16 @@ function changeTheme() {
         // change home icon color
         document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeRetro.png)";
 
-        // store the theme "retro" in local cache
         window.localStorage.setItem("storedTheme", "red");
     }
 
-    // else the desired theme change is "light", change CSS variables to the corresponding color palette
+    // if theme is blue
     else {
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "#add2c9");
-        root.style.setProperty('--itemBackground', "#f1ebeb");
-        root.style.setProperty('--textColor', "#5ea3a3");
-        root.style.setProperty('--readOnlyColor', "#28595c");
+        root.style.setProperty('--primaryColor', "rgba(0, 50, 252)");
+        root.style.setProperty('--itemBackground', "rgba(0,0,0)");
+        root.style.setProperty('--textColor', "rgba(120, 140, 255)");
+        root.style.setProperty('--readOnlyColor', "rgba(120, 140, 255)");
         root.style.setProperty('--tableColor', "#28595c");
         root.style.setProperty('--headerColor', "#28595c");
         root.style.setProperty('--tableItemBackground', "#62a7a1");
