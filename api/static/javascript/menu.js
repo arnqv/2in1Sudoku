@@ -206,8 +206,8 @@ function changeTheme() {
         root.style.setProperty('--color9', "#FF99CC");
 
         // change play and solve images to the "retro" version
-        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/retro_play.png)";
-        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/retro_solve.png)";
+        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/redsudoku.png)";
+        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/redfullsudoku.png)";
 
         // store the theme "retro" in local cache
         window.localStorage.setItem("storedTheme", "red");
