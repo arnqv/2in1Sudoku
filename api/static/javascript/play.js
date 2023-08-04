@@ -1283,10 +1283,10 @@ function changeTheme() {
     if (themeid == "white") {
 
         // change document CSS colors
-        root.style.setProperty('--primaryColor', "#f6f0e8");
-        root.style.setProperty('--itemBackground', "#c5c5c5");
-        root.style.setProperty('--textColor', "#0a0a0a");
-        root.style.setProperty('--readOnlyColor', "#0a0a0a");
+        root.style.setProperty('--primaryColor', "#f6f0e8"); //board line color
+        root.style.setProperty('--itemBackground',"rgba(0, 0, 0)"); //square color
+        root.style.setProperty('--textColor', "#f6f0e8"); 
+        root.style.setProperty('--readOnlyColor', "##f6f0e8");
         root.style.setProperty('--tableColor', "#f6f0e8");
         root.style.setProperty('--headerColor', "#0a0a0a");
         root.style.setProperty('--tableItemBackground', "#808080");
