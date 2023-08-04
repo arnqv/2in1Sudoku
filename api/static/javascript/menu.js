@@ -250,8 +250,8 @@ function changeTheme() {
         root.style.setProperty('--color9', "#FF99CC");
         
         // change play and solve images to the "light" version
-        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/light_play.png)";
-        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/light_solve.png)";
+        document.getElementById("playimage").style.backgroundImage = "url(/static/css/images/bluesudoku.png)";
+        document.getElementById("solveimage").style.backgroundImage = "url(/static/css/images/bluefullsudoku.png)";
 
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
