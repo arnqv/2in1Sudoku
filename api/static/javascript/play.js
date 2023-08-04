@@ -1286,7 +1286,7 @@ function changeTheme() {
         root.style.setProperty('--primaryColor', "rgba(130, 129, 129)"); //board line color
         root.style.setProperty('--itemBackground',"rgba(0, 0, 0)"); //square color
         root.style.setProperty('--textColor', "#f6f0e8"); 
-        root.style.setProperty('--readOnlyColor', "rgba(199, 197, 197)");
+        root.style.setProperty('--readOnlyColor', "#f6f0e8");
         root.style.setProperty('--tableColor', "#f6f0e8");
         root.style.setProperty('--headerColor', "#0a0a0a");
         root.style.setProperty('--tableItemBackground', "#808080");

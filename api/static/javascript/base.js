@@ -117,17 +117,16 @@ function changeTheme() {
     // if the desired theme change is "white", change CSS variables to the corresponding color palette
     if (themeid == "white") {
 
-        // change document CSS colors
-        root.style.setProperty('--primaryColor', "#f6f0e8");
-        root.style.setProperty('--itemBackground', "#808080");
-        root.style.setProperty('--textColor', "#0a0a0a");
-        root.style.setProperty('--readOnlyColor', "#0a0a0a");
+        root.style.setProperty('--primaryColor', "rgba(130, 129, 129)"); //board line color
+        root.style.setProperty('--itemBackground',"rgba(0, 0, 0)"); //square color
+        root.style.setProperty('--textColor', "#f6f0e8"); 
+        root.style.setProperty('--readOnlyColor', "#f6f0e8");
         root.style.setProperty('--tableColor', "#f6f0e8");
         root.style.setProperty('--headerColor', "#0a0a0a");
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
-        root.style.setProperty('--buttonText', "#4f4f4f");
-        root.style.setProperty('--shiftColor', "#4f4f4f");
+        root.style.setProperty('--buttonText', "#0a0a0a");
+        root.style.setProperty('--shiftColor', "#0a0a0a");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
