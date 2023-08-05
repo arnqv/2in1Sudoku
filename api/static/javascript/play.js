@@ -1315,9 +1315,6 @@ function changeTheme() {
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
 
-        // change home icon color
-        document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeTan.png)";
-
         window.localStorage.setItem("storedTheme", "white");
 
     }
@@ -1356,9 +1353,6 @@ function changeTheme() {
         root.style.setProperty('--color7', "rgba(209, 255, 219)");
         root.style.setProperty('--color8', "rgba(209, 255, 219)");
         root.style.setProperty('--color9', "rgba(209, 255, 219)");
-
-        // change home icon color
-        document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeDark.png)";
 
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
@@ -1399,8 +1393,6 @@ function changeTheme() {
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
 
-        // change home icon color
-        document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeRetro.png)";
 
         window.localStorage.setItem("storedTheme", "red");
     }
@@ -1439,9 +1431,6 @@ function changeTheme() {
         root.style.setProperty('--color7', "#CC99FF");
         root.style.setProperty('--color8', "lightsteelblue");
         root.style.setProperty('--color9', "#FF99CC");
-
-        // change home icon color
-        document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeLight.png)";
 
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
