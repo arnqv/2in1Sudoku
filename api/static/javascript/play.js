@@ -1091,7 +1091,6 @@ function highlightNums() {
         // if the cell is not in "conflictArray", unhighlight the cell
         if (conflictArray.includes(i) == false) {
             document.getElementById(i).style.filter = "brightness(100%)";
-            document.getElementById(i).style.filter = "backgroundColor(none)";
         }
 
         // if the cell's value includes "num"
