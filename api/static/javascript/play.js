@@ -275,7 +275,7 @@ $(document).keydown(
 
                 // change the background color of the focused cell to the "shiftColor" CSS variable
                 if (document.activeElement.id != "pencilmarks") {
-                    document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+                    document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
                 }
                 isShift = true;
             }
@@ -341,7 +341,7 @@ $(document).keydown(
 
                 // add all the grid items to "selectArray" and change the background color of all grid items to the shift color
                 selectArray[i] = true;
-                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
             }
         }
 
@@ -835,7 +835,7 @@ function selectFocus(id) {
     // if the user is focusing and "isSelectMultiple" is true, change the background color to the shift color for that cell
     if (isSelectMultiple) {
         selectArray[id] = true;
-        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
     }
 }
 
@@ -854,7 +854,7 @@ function selectClick(id) {
     // if the user is selecting and "isSelectMultiple" is true, change the background color to the shift color for that cell
     if (isSelectMultiple) {
         selectArray[id] = true;
-        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
     }
     
     // else the user is done with shift clicking and wants to stop selecting multiple elements
@@ -908,9 +908,9 @@ function selectDrag(id) {
         document.getElementById("shiftIndication").style.backgroundColor = root.style.getPropertyValue('--shiftIndication');
         isSelectMultiple = true;
         selectArray[document.activeElement.id] = true;
-        document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+        document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
         selectArray[id] = true;
-        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+        document.getElementById(id).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
 
         // change the focus on the board to the cells being dragged over to make it clear to the user where on the board they are
         curId = id;
@@ -1098,7 +1098,7 @@ function highlightNums() {
 
             // if num is not blank and the cell has a "normal" or starting number, highlight the cell
             if (num != "" && (document.activeElement.className.includes("txt-input") || document.activeElement.className.includes("readonly"))) {
-                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
             }
         }
     }
@@ -1292,7 +1292,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
         root.style.setProperty('--buttonText', "#0a0a0a");
-        root.style.setProperty('--shiftColor', "rgba(129, 133, 129)");
+        root.style.setProperty('--highlightColor', "rgba(129, 133, 129)");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -1331,7 +1331,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#a1c4db");
         root.style.setProperty('--buttonBackground', "#4f4f4f");
         root.style.setProperty('--buttonText', "#04f700");
-        root.style.setProperty('--shiftColor', "rgba(17, 128, 0)");
+        root.style.setProperty('--highlightColor', "rgba(17, 128, 0)");
         root.style.setProperty('--messageTextColor', "#bbe1fa");
         root.style.setProperty('--focusText', "#226897");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -1370,7 +1370,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#f2f4f7");
         root.style.setProperty('--buttonBackground', "#e43a19");
         root.style.setProperty('--buttonText', "#020205");
-        root.style.setProperty('--shiftColor', "rgba(232, 93, 0)");
+        root.style.setProperty('--highlightColor', "rgba(232, 93, 0)");
         root.style.setProperty('--messageTextColor', "#f6f0e8");
         root.style.setProperty('--focusText', "#F3ECE7");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -1409,7 +1409,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#62a7a1");
         root.style.setProperty('--buttonBackground', "#4db492");
         root.style.setProperty('--buttonText', "#d2fff0");
-        root.style.setProperty('--shiftColor', "rgba(159, 33, 255)");
+        root.style.setProperty('--highlightColor', "rgba(159, 33, 255)");
         root.style.setProperty('--messageTextColor', "#1b4857");
         root.style.setProperty('--focusText', "#28595c");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -1781,7 +1781,7 @@ function restart() {
 
         // select the cell
         selectArray[i] = true;
-        document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
+        document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--highlightColor');
 
     }
 
