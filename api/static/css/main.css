@@ -26,6 +26,10 @@
     --underlineColor: 
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Primary CSS */
 body, html {
     font-family: 'Poppins', sans-serif;
