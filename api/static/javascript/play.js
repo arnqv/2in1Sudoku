@@ -1292,7 +1292,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
         root.style.setProperty('--buttonText', "#0a0a0a");
-        root.style.setProperty('--shiftColor', "#0a0a0a");
+        root.style.setProperty('--shiftColor', "rgba(129, 133, 129)");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -1331,7 +1331,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#a1c4db");
         root.style.setProperty('--buttonBackground', "#4f4f4f");
         root.style.setProperty('--buttonText', "#04f700");
-        root.style.setProperty('--shiftColor', "#6f818a");
+        root.style.setProperty('--shiftColor', "rgba(17, 128, 0)");
         root.style.setProperty('--messageTextColor', "#bbe1fa");
         root.style.setProperty('--focusText', "#226897");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -1370,7 +1370,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#f2f4f7");
         root.style.setProperty('--buttonBackground', "#e43a19");
         root.style.setProperty('--buttonText', "#020205");
-        root.style.setProperty('--shiftColor', "#fce17a");
+        root.style.setProperty('--shiftColor', "rgba(232, 93, 0)");
         root.style.setProperty('--messageTextColor', "#f6f0e8");
         root.style.setProperty('--focusText', "#F3ECE7");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -1409,7 +1409,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#62a7a1");
         root.style.setProperty('--buttonBackground', "#4db492");
         root.style.setProperty('--buttonText', "#d2fff0");
-        root.style.setProperty('--shiftColor', "#fce17a");
+        root.style.setProperty('--shiftColor', "rgba(159, 33, 255)");
         root.style.setProperty('--messageTextColor', "#1b4857");
         root.style.setProperty('--focusText', "#28595c");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
