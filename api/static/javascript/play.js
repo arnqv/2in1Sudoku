@@ -1090,7 +1090,7 @@ function highlightNums() {
 
         // if the cell is not in "conflictArray", unhighlight the cell
         if (conflictArray.includes(i) == false) {
-            document.getElementById(i).style.backgroundColor = "black";
+            document.getElementById(i).style.backgroundColor = root.style.getPropertyPriority('--primaryColor');
         }
 
         // if the cell's value includes "num"
