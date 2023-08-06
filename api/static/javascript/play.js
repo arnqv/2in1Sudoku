@@ -1126,6 +1126,7 @@ function toggleHighlightNums() {
         // loop through all 81 cells and unhighlight each cell
         for (var i = 0; i < 81; i++) {
             document.getElementById(i).style.filter = "brightness(100%)";
+            document.getElementById(i).style.backgroundColor = root.style.getPropertyPriority('--primaryColor');
         }
         
         // if isHighlightRcb is true, call highlightRcb() to rehighlight those cells
