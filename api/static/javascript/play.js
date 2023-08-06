@@ -1091,6 +1091,7 @@ function highlightNums() {
         // if the cell is not in "conflictArray", unhighlight the cell
         if (conflictArray.includes(i) == false) {
             document.getElementById(i).style.filter = "brightness(100%)";
+            document.getElementById("i").style.filter = "backgroundColor(none)";
         }
 
         // if the cell's value includes "num"
@@ -1099,6 +1100,7 @@ function highlightNums() {
             // if num is not blank and the cell has a "normal" or starting number, highlight the cell
             if (num != "" && (document.activeElement.className.includes("txt-input") || document.activeElement.className.includes("readonly"))) {
                 document.getElementById(i).style.filter = root.style.getPropertyValue('--highlightOpacity');
+                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--shiftColor');
 
             }
         }
