@@ -1303,6 +1303,7 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "#7f7f7f;");
         root.style.setProperty('--bodyTextColor', "white");
         root.style.setProperty('--underlineColor', "white");
+        root.style.setProperty('--opPreColor', "rgba(255, 255, 255, 0.8)");
 
         // change table colors
         root.style.setProperty('--color1', "#0a0a0a");
@@ -1342,6 +1343,7 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "#8cff8a");
         root.style.setProperty('--bodyTextColor', "#8cff8a");
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
+        root.style.setProperty('--opPreColor', "rgba(140, 255, 138, 0.8)");
 
         // change table colors
         root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
@@ -1381,6 +1383,7 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "rgba(250, 124, 115)");
         root.style.setProperty('--bodyTextColor', "rgba(250, 124, 115)");
         root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
+        root.style.setProperty('--opPreColor', "rgba(250, 124, 115, 0.8)");
 
         // change table colors
         root.style.setProperty('--color1', "#FFCCCC");
@@ -1420,6 +1423,7 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "rgba(120, 140, 255)");
         root.style.setProperty('--bodyTextColor', "rgba(120, 140, 255)");
         root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
+        root.style.setProperty('--opPreColor', "rgba(120, 140, 255, 0.8)");
 
         // change table colors
         root.style.setProperty('--color1', "#FF9999");
