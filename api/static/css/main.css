@@ -32,11 +32,10 @@ html {
   }
 
 ul {
-    margin-left: 0;
-    padding-left: 4em;
+    padding-left: 0;
 }
 li {
-    margin-left: 1em;
+    list-style-position: inside;
 }
 
 /* Primary CSS */
