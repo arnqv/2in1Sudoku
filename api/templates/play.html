@@ -131,8 +131,35 @@ body {
 
                     <div id="optionicons">
                         <div id="shiftIndication"></div>
-                        <div id="timer" style="position:absolute;top:270px;right:100px;">00:00</div>
-                    </div><br>
+                        <div id="timer" style="position:absolute;top:270px;right:130px;">00:00</div>
+                    </div>
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<svg style="position:absolute;top:330px;" width="104" height="104" id='pause'>
+  <circle id="circle" cx="51" cy="51" r="50" stroke-dasharray="314" stroke-dashoffset="0" style="stroke-width:2px;stroke:green;" />
+  <line id='line1' x1="38" y1="30" x2="38" y2="70" style="stroke-width:4px;stroke:green;stroke-linecap: round;" />
+  <path id='line2' d="M 66 30 L 66 50 L 66 70" rx="10" ry="10" style="stroke-width:4px;stroke:green;fill:green;stroke-linejoin: round;stroke-linecap: round;">
+    <animate
+      attributeName="d"
+      dur="300ms"
+      from="M 66 30 L 66 50 L 66 70"
+      to="M 38 30 L 70 50 L 38 70"
+      begin="indefinite"
+      fill="freeze"
+      id="from_pause_to_play"
+    />
+  </path>
+  <animate
+    xlink:href="#line2"
+    attributeName="d"
+    dur="300ms"
+    from="M 38 30 L 70 50 L 38 70"
+    to="M 66 30 L 66 50 L 66 70"
+    fill="freeze"
+    id="from_play_to_pause"
+    begin="indefinite"
+  />
 
                     <div onclick="fillAllPms()" class="optiondivs">Auto Fill Pencilmarks</div>
 
