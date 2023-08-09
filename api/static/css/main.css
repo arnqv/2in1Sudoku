@@ -606,7 +606,7 @@ div#optionicons {
     padding: 0;
 }
 div#timer {
-    color: var(--bodyTextColor);
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 60px;
     margin-top: 6px;
