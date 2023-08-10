@@ -55,6 +55,9 @@ var isAutoFill = false;
 // global variable (boolean) that indicates if the instructions message should be opened or closed
 var showInstructions = true;
 
+// global variable (boolean) that indicates if the Pause/Play message should be opened or closed
+var showPause = true;
+
 // global variable (boolean) that indicates if the about message should be opened or closed
 var showAbout = true;
 
@@ -1851,3 +1854,37 @@ $(document).ready(function() {
       }
     });
   });
+
+  /**
+ * Display Pause/Play Message
+ */ 
+function pauseDisplay() {
+
+    // close check message if it is open
+    if (document.getElementById("checkoverlay").style.display != "none") {
+        document.getElementById("checkoverlay").style.display = "none";
+        document.getElementById("grid-container").style.display = "grid";
+    }
+
+    // close "About Us" message if it is open
+    if (!showAbout) {
+        document.getElementById("aboutdisplay").style.display = "none";
+        document.getElementById("grid-container").style.display = "grid";
+        document.getElementById("about").innerHTML = "About";
+        showAbout = true;
+    }
+
+    // display "Instructions" message
+    if (showPause) {
+        document.getElementById("instructionsdisplay").style.display = "block";
+        document.getElementById("grid-container").style.display = "none";
+        showPause = false;
+    }
+
+    // close "Pause/Play" display
+    else {
+        document.getElementById("instructionsdisplay").style.display = "none";
+        document.getElementById("grid-container").style.display = "grid";
+        showPause = true;
+    }
+}
