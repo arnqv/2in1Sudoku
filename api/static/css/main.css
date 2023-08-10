@@ -150,7 +150,8 @@ div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menu
     height: 456px;
     left: 0%;
     margin: auto;
-    border: 2px solid white;
+    border: 4px solid var(--primaryColor);
+    background-color: black;
     text-align: left;
     overflow: hidden;
     margin-bottom: 4px;
