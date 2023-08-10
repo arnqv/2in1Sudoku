@@ -150,13 +150,13 @@ div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menu
     height: 448px;
     left: 0%;
     margin: auto;
-    border: 5.5px solid var(--primaryColor);
+    border: 5.3px solid var(--primaryColor);
     background-color: black;
     text-align: left;
     overflow: hidden;
     margin-bottom: 4px;
     display: none;
-    width: 448px;
+    width: 447px;
 }
 div#menuinstructionsdisplay, div#menuaboutdisplay {
     width: 403px;
