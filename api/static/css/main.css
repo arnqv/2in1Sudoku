@@ -146,17 +146,17 @@ div.grid-item {
 div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menuaboutdisplay, div#checkoverlay {
     font-size: 14px;
     padding: 10px;
-    color: var(--messageTextColor);
-    height: 442px;
+    color: white;
+    height: 448px;
     left: 0%;
     margin: auto;
-    border: 5px solid var(--primaryColor);
+    border: 5.5px solid var(--primaryColor);
     background-color: black;
     text-align: left;
     overflow: hidden;
     margin-bottom: 4px;
     display: none;
-    width: 445px;
+    width: 448px;
 }
 div#menuinstructionsdisplay, div#menuaboutdisplay {
     width: 403px;
