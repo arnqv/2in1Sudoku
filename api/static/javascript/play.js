@@ -52,14 +52,8 @@ var isHighlightRcb = false;
 // global variable (boolean) for if the option of automatically filling pencilmarks is on/off
 var isAutoFill = false;
 
-// global variable (boolean) that indicates if the instructions message should be opened or closed
-var showInstructions = true;
-
 // global variable (boolean) that indicates if the Pause/Play message should be opened or closed
 var showPause = true;
-
-// global variable (boolean) that indicates if the about message should be opened or closed
-var showAbout = true;
 
 // global variable (String) for the number that the user just inputted through the keyboard or numbers table
 var lastNumEntered = "";
@@ -1515,78 +1509,6 @@ function changeTheme() {
 }
 
 /**
- * Displays "Instructions" message
- */
-function instructionsDisplay() {
-
-    // close check message if it is open
-    if (document.getElementById("checkoverlay").style.display != "none") {
-        document.getElementById("checkoverlay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-    }
-
-    // close "About Us" message if it is open
-    if (!showAbout) {
-        document.getElementById("aboutdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("about").innerHTML = "About";
-        showAbout = true;
-    }
-
-    // display "Instructions" message
-    if (showInstructions) {
-        document.getElementById("instructionsdisplay").style.display = "block";
-        document.getElementById("grid-container").style.display = "none";
-        document.getElementById("instructions").innerHTML = "Close Instructions";
-        showInstructions = false;
-    }
-
-    // close "Instructions" message
-    else {
-        document.getElementById("instructionsdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("instructions").innerHTML = "Instructions";
-        showInstructions = true;
-    }
-}
-
-/**
- * Displays "About Us" message
- */
-function aboutDisplay() {
-    
-    // close check message if it is open
-    if (document.getElementById("checkoverlay").style.display != "none") {
-        document.getElementById("checkoverlay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-    }
-
-    // close "Instructions" message if it is open 
-    if (!showInstructions) {
-        document.getElementById("instructionsdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("instructions").innerHTML = "Instructions";
-        showInstructions = true;
-    }
-
-    // display "About Us" message
-    if (showAbout) {
-        document.getElementById("aboutdisplay").style.display = "block";
-        document.getElementById("grid-container").style.display = "none";
-        document.getElementById("about").innerHTML = "Close About Us";
-        showAbout = false;
-    }
-    
-    // close "About Us" message
-    else {
-        document.getElementById("aboutdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("about").innerHTML = "About Us";
-        showAbout = true;
-    }
-}
-
-/**
  * Increases one second to the timer and rewrites the HTML of the timer
  */
 function tick() {
@@ -1638,22 +1560,6 @@ function validateForm() {
 
     // store the "timeElapsed" in local cache
     window.localStorage.setItem("time", timeElapsed);
-
-    // close "Instructions" message if it is open 
-    if (!showInstructions) {
-        document.getElementById("instructionsdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("instructions").innerHTML = "Instructions";
-        showInstructions = true;
-    }
-
-    // close "About Us" message if it is open
-    if (!showAbout) {
-        document.getElementById("aboutdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("about").innerHTML = "About Us";
-        showAbout = true;
-    }
 
     // initialize two local variable booleans to test if the grid is still empty or if it still contains pencilmarks
     var isStillEmpty = false;
@@ -1866,15 +1772,7 @@ function pauseDisplay() {
         document.getElementById("grid-container").style.display = "grid";
     }
 
-    // close "About Us" message if it is open
-    if (!showAbout) {
-        document.getElementById("aboutdisplay").style.display = "none";
-        document.getElementById("grid-container").style.display = "grid";
-        document.getElementById("about").innerHTML = "About";
-        showAbout = true;
-    }
-
-    // display "Instructions" message
+    // display "Pause/Play" message
     if (showPause) {
         document.getElementById("instructionsdisplay").style.display = "block";
         document.getElementById("grid-container").style.display = "none";
