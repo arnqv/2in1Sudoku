@@ -147,16 +147,16 @@ div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menu
     font-size: 14px;
     padding: 10px;
     color: var(--messageTextColor);
-    height: 456px;
+    height: 442px;
     left: 0%;
     margin: auto;
-    border: 4.5px solid var(--primaryColor);
+    border: 5px solid var(--primaryColor);
     background-color: black;
     text-align: left;
     overflow: hidden;
     margin-bottom: 4px;
     display: none;
-    width: 450px;
+    width: 445px;
 }
 div#menuinstructionsdisplay, div#menuaboutdisplay {
     width: 403px;
