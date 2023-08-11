@@ -359,7 +359,12 @@ button.colors {
     background-color: var(--opPreColor);
     cursor: pointer;
     outline: none;
+    transition-duration: 0.3s;
 }
+button.colors:hover {
+    background-color: black; /* Green */
+    color: white;
+  }
 div#tablecontainer {
     margin: 5px;
 }
