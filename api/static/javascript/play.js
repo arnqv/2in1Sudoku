@@ -368,8 +368,8 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("pencilmarks").style.backgroundColor = root.style.getPropertyValue('--opFocusedColor');
-        document.getElementById("normal").style.backgroundColor = root.style.getPropertyValue('--opPreColor');
+        document.getElementById("pencilmarks").style.border = "solid white";
+        document.getElementById("normal").style.border = "none";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -382,8 +382,8 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("normal").style.backgroundColor = root.style.getPropertyValue('--opFocusedColor');
-        document.getElementById("pencilmarks").style.backgroundColor = root.style.getPropertyValue('--opPreColor');
+        document.getElementById("normal").style.backgroundColor = "solid white";
+        document.getElementById("pencilmarks").style.backgroundColor = "none";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -970,7 +970,7 @@ function toggleHighlightNums() {
         // change the class name of the highlighnums div to indicate that it has been turned off
         document.getElementById("highlightnums").className = "opbutton";
         document.getElementById("highlightnums").innerHTML = "Highlight Same Digits";
-        document.getElementById("highlightnums").style.backgroundColor = root.style.getPropertyValue('--opPreColor');
+        document.getElementById("highlightnums").style.border = "none";
         
         // loop through all 81 cells and unhighlight each cell
         for (var i = 0; i < 81; i++) {
@@ -993,7 +993,7 @@ function toggleHighlightNums() {
 
         // change the class name of the highlighnums div to indicate that it has been turned on
         document.getElementById("highlightnums").innerHTML = "Remove Highlights";
-        document.getElementById("highlightnums").style.backgroundColor = root.style.getPropertyValue('--opFocusedColor');
+        document.getElementById("highlightnums").style.border = "solid white";
 
         // call highlightNums() to see immediate highlighting 
         highlightNums();
