@@ -368,8 +368,9 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("pencilmarks").style.border = "2.5px solid white";
-        document.getElementById("normal").style.border = "none";
+        document.getElementById("pencilmarks").style.textDecoration = "underline";
+        document.getElementById("pencilmarks").style.textDecorationThickness= "4px";
+        document.getElementById("normal").style.textDecoration = "none";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -382,8 +383,9 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("normal").style.border = "2.5px solid white";
-        document.getElementById("pencilmarks").style.border = "none";
+        document.getElementById("normal").style.textDecoration = "underline";
+        document.getElementById("normal").style.textDecorationThickness= "4px";
+        document.getElementById("pencilmarks").style.textDecoration = "none";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -659,7 +661,7 @@ function undo() {
 function fillAllPms() {
 
     changeMode("pencilmarks");
-    
+
 
     // set "isAutoFill" to true and start a new count of "autoFillCount"
     isAutoFill = true;
@@ -971,7 +973,8 @@ function toggleHighlightNums() {
         // change the class name of the highlighnums div to indicate that it has been turned off
         document.getElementById("highlightnums").className = "opbutton";
         document.getElementById("highlightnums").innerHTML = "Highlight Same Digits";
-        document.getElementById("highlightnums").style.border = "none";
+        document.getElementById("highlightnums").style.textDecoration = "none";
+        document.getElementById("highlightnums").style.textDecorationThickness= "none";
         
         // loop through all 81 cells and unhighlight each cell
         for (var i = 0; i < 81; i++) {
@@ -994,7 +997,8 @@ function toggleHighlightNums() {
 
         // change the class name of the highlighnums div to indicate that it has been turned on
         document.getElementById("highlightnums").innerHTML = "Remove Highlights";
-        document.getElementById("highlightnums").style.border = "2.5px solid white";
+        document.getElementById("highlightnums").style.textDecoration = "underline";
+        document.getElementById("highlightnums").style.textDecorationThickness= "4px";
 
         // call highlightNums() to see immediate highlighting 
         highlightNums();
