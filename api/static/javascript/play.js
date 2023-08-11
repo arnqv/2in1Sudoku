@@ -67,17 +67,6 @@ var root = document.documentElement;
 // global variable (boolean) that indicates if the current grid is solved
 var solved = $('#my-data').data().name;
 
-// global variables (String) that hold the CSS colors for different themes
-var color1 = root.style.getPropertyValue('--color1');
-var color2 = root.style.getPropertyValue('--color2');
-var color3 = root.style.getPropertyValue('--color3');
-var color4 = root.style.getPropertyValue('--color4');
-var color5 = root.style.getPropertyValue('--color5');
-var color6 = root.style.getPropertyValue('--color6');
-var color7 = root.style.getPropertyValue('--color7');
-var color8 = root.style.getPropertyValue('--color8');
-var color9 = root.style.getPropertyValue('--color9');
-
 // global variable (String) for the HTML table for inputting a number
 var numbersTable = `
     <table>
@@ -1098,33 +1087,7 @@ function revertChangeTheme() {
  * Changes theme based on user specified selection
  */
 function changeTheme() {
-
-    // if grid contains colors, obtain the position and color and store it in a map named "oldThemeColorMap"
-    var oldThemeColorMap = {};
-
-    // loop through all 81 cells
-    for (var i = 0; i < 81; i++) {
-        
-        // if a color exists in the cell position
-        if (colorMap[i] != "" && colorMap[i] != undefined && colorMap[i] != null) {
-
-            // loop through all 9 colors
-            for (var j = 1; j < 10; j++) {
-                
-                var val = root.style.getPropertyValue('--color' + j);
-                
-                // if the color matches with the cell position, add it to "oldthemColorMap" along with its position
-                if (val.includes(colorMap[i])) {
-                    oldThemeColorMap[i] = "color" + j;
-                    break;
-                }
-
-                // else set the position to in the map to "", indicating that there is no color at that position
-                else {
-                    oldThemeColorMap[i] = "";
-                }
-            }
-        }
+        oldThemeColorMap[i] = "";
     }
 
     // obtain the theme in cache and assign it to "themeid"
@@ -1159,17 +1122,6 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "white");
         root.style.setProperty('--opPreColor', "rgba(255, 255, 255, 0.8)");
 
-        // change table colors
-        root.style.setProperty('--color1', "#0a0a0a");
-        root.style.setProperty('--color2', "#0a0a0a");
-        root.style.setProperty('--color3', "#0a0a0a");
-        root.style.setProperty('--color4', "#0a0a0a");
-        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "#0a0a0a");
-        root.style.setProperty('--color7', "#0a0a0a");
-        root.style.setProperty('--color8', "lightsteelblue");
-        root.style.setProperty('--color9', "#FF99CC");
-
         window.localStorage.setItem("storedTheme", "white");
 
     }
@@ -1198,17 +1150,6 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "#8cff8a");
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
         root.style.setProperty('--opPreColor', "rgba(140, 255, 138, 0.8)");
-
-        // change table colors
-        root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
-        root.style.setProperty('--color2', "rgba(209, 255, 219)");
-        root.style.setProperty('--color3', "rgba(209, 255, 219)");
-        root.style.setProperty('--color4', "rgba(209, 255, 219)");
-        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "rgba(209, 255, 219)");
-        root.style.setProperty('--color7', "rgba(209, 255, 219)");
-        root.style.setProperty('--color8', "rgba(209, 255, 219)");
-        root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
@@ -1239,17 +1180,6 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
         root.style.setProperty('--opPreColor', "rgba(250, 124, 115, 0.8)");
 
-        // change table colors
-        root.style.setProperty('--color1', "#FFCCCC");
-        root.style.setProperty('--color2', "lightsalmon");
-        root.style.setProperty('--color3', "#99FF99");
-        root.style.setProperty('--color4', "#99FFFF");
-        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "#99CCFF");
-        root.style.setProperty('--color7', "#CC99FF");
-        root.style.setProperty('--color8', "lightsteelblue");
-        root.style.setProperty('--color9', "#FF99CC");
-
 
         window.localStorage.setItem("storedTheme", "red");
     }
@@ -1279,17 +1209,6 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
         root.style.setProperty('--opPreColor', "rgba(120, 140, 255, 0.8)");
 
-        // change table colors
-        root.style.setProperty('--color1', "#FF9999");
-        root.style.setProperty('--color2', "lightsalmon");
-        root.style.setProperty('--color3', "#99FF99");
-        root.style.setProperty('--color4', "#99FFFF");
-        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
-        root.style.setProperty('--color6', "#99CCFF");
-        root.style.setProperty('--color7', "#CC99FF");
-        root.style.setProperty('--color8', "lightsteelblue");
-        root.style.setProperty('--color9', "#FF99CC");
-
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
     }
@@ -1311,22 +1230,6 @@ function changeTheme() {
             highlightNums();
         }
 
-    }
-
-    // loop through all cells
-    for (var i = 0; i < 81; i++) {
-
-        // if there is a color in the cell position
-        if (oldThemeColorMap[i] != "" && oldThemeColorMap[i] != undefined && oldThemeColorMap[i] != null) {
-            
-            // loop through all 9 colors and change the color based on the changed theme
-            for (var j = 1; j < 10; j++) {
-                if (oldThemeColorMap[i].includes(j)) {
-                    colorMap[i] = root.style.getPropertyValue('--color' + j);
-                }
-            }
-            
-        }
     }
 
     // select all cells
