@@ -373,7 +373,23 @@ function changeMode(modeId) {
         document.getElementById("tablecontainer").innerHTML = numbersTable;
 
     }
+    else {
+        // change the mode to "Normal" and not "Colors" or "Pencilmarks"
+        isNormal = true;
 
+        // change the class name of the mode div to make it appear focused
+        document.getElementById("pencilmarks").className = "opbutton";
+        document.getElementById("normal").className = "opbutton";
+
+        // change the table container to the numbers table, instead of the colors table
+        document.getElementById("tablecontainer").innerHTML = numbersTable;
+    }
+        changeClassName();
+
+    // after changing modes, focus back on to the last valid grid item
+    if (document.getElementById(curId) != null) {
+        document.getElementById(curId).focus();
+    }
 }
 
 /**
