@@ -37,9 +37,6 @@ var drag = false;
 // global variable (boolean) for if the mode is "Normal" (true) or "Pencilmarks" (false)
 var isNormal = true;
 
-// global variable (boolean) for if the mode of "Colors" is on/off
-var isColor = false;
-
 // global variable (boolean) for if the option of automatically deleting pencilmarks is on/off
 var isDeletePms = false;
 
@@ -102,28 +99,6 @@ var numbersTable = `
     </table>
 `;
 
-// global variable (String) for the HTML table for adding a color
-var colorsTable = `
-    <table>
-        <tr>
-            <td><button type="button" id="color1" class="colors" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color2" class="colors" style="background-color: color2;" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color3" class="colors" style="background-color: color3;" type="button" onclick="setColor(this.id)"> </button></td>
-        </tr>
-        <tr>
-            <td><button type="button" id="color4" class="colors" style="background-color: color4;" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color5" class="colors" tyle="background-color: color5;" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color6" class="colors" style="background-color: color6;" type="button" onclick="setColor(this.id)"> </button></td>
-        </tr>
-        <tr>
-            <td><button type="button" id="color7" class="colors" style="background-color: color7;" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color8" class="colors" style="background-color: color8;" type="button" onclick="setColor(this.id)"> </button></td>
-            <td><button type="button" id="color9" class="colors" style="background-color: color9;" type="button" onclick="setColor(this.id)"> </button></td>
-        </tr>
-    </table>
-`;
-
-
 $(document).keydown(
     /**
     * Event handling function for the keydown event 
@@ -134,34 +109,7 @@ $(document).keydown(
         // true if one of the arrow keys is pressed; false otherwise
         var arrowKeyPressed = false;
 
-        // if in "Colors" mode, prevent "Normal" or "Pencilmarks" numbers from being inputted and use the numbers as colors instead
-        if (isColor && e.keyCode >= 49 && e.keyCode <= 57) {
-            var inter = "color" + (e.keyCode - 48).toString();
 
-            // loop through all 81 cells
-            for (var i = 0; i < 81; i++) {
-
-                // if the cell is selected
-                if (selectArray[i]) {
-
-                    // get the current color and set the value of "colorMap" to that color
-                    currentColor = root.style.getPropertyValue('--' + inter);
-                    colorMap[i] = currentColor;
-
-                    // set the background color of the cell
-                    document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--' + inter);
-                }
-            }
-
-            // if the active element is a cell, change its background color to the corresponding color
-            if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
-                document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--' + inter);
-            }
-
-            // prevent the user from inputting a number if in the "Colors" mode
-            e.preventDefault();
-        }
-        
         // if the active element is one of the 81 cells
         if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
 
@@ -316,13 +264,10 @@ $(document).keydown(
         else if (e.keyCode == 32) {
 
             // change modes between "Normal", "Pencilmarks", and "Colors" in order
-            if (isNormal && !isColor) {
+            if (isNormal) {
                 changeMode("pencilmarks");
             }
-            else if (!isNormal && !isColor) {
-                changeMode("colors");
-            }
-            else if (isColor && !isNormal) {
+            else if (!isNormal) {
                 changeMode("normal");
             }
         }
@@ -437,69 +382,18 @@ function createArray() {
 function changeMode(modeId) {
     if (modeId == "pencilmarks") {
 
-        // change the mode to "Pencilmarks" and not "Normal" or "Colors"
+        // change the mode to "Pencilmarks" and not "Normal"
         isNormal = false;
-        isColor = false;
 
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "modefocus";
         document.getElementById("normal").className = "modedivs";
-        document.getElementById("colors").className = "modedivs";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
 
     }
 
-    else if (modeId == "colors") {
-
-        // change the mode to "Colors" and not "Normal" or "Pencilmarks"
-        isColor = true;
-        isNormal = false;
-
-        // change the class name of the mode div to make it appear focused
-        document.getElementById("colors").className = "modefocus";
-        document.getElementById("pencilmarks").className = "modedivs";
-        document.getElementById("normal").className = "modedivs";
-
-        // change the table container to the colors table, instead of the numbers table
-        document.getElementById("tablecontainer").innerHTML = colorsTable;
-
-        // set the background color of the buttons in the colors table to the appropriate CSS variable for that theme
-        document.getElementById("color1").style.backgroundColor = root.style.getPropertyValue("--color1");
-        document.getElementById("color2").style.backgroundColor = root.style.getPropertyValue("--color2");
-        document.getElementById("color3").style.backgroundColor = root.style.getPropertyValue("--color3");
-        document.getElementById("color4").style.backgroundColor = root.style.getPropertyValue("--color4");
-        document.getElementById("color5").style.backgroundColor = root.style.getPropertyValue("--color5");
-        document.getElementById("color6").style.backgroundColor = root.style.getPropertyValue("--color6");
-        document.getElementById("color7").style.backgroundColor = root.style.getPropertyValue("--color7");
-        document.getElementById("color8").style.backgroundColor = root.style.getPropertyValue("--color8");
-        document.getElementById("color9").style.backgroundColor = root.style.getPropertyValue("--color9");
-    }
-    
-    else {
-        // change the mode to "Normal" and not "Colors" or "Pencilmarks"
-        isNormal = true;
-        isColor = false;
-
-        // change the class name of the mode div to make it appear focused
-        document.getElementById("pencilmarks").className = "modedivs";
-        document.getElementById("normal").className = "modefocus";
-        document.getElementById("colors").className = "modedivs";
-
-        // change the table container to the numbers table, instead of the colors table
-        document.getElementById("tablecontainer").innerHTML = numbersTable;
-    }
-
-    // if in "Normal" or "Pencilmarks" mode, call changeClassName
-    if (!isColor) {
-        changeClassName();
-    }
-
-    // after changing modes, focus back on to the last valid grid item
-    if (document.getElementById(curId) != null) {
-        document.getElementById(curId).focus();
-    }
 }
 
 /**
@@ -638,10 +532,7 @@ function normalInput(id) {
  * @param {String} id  An id from 0-80 that maps to a specific cell in the grid
  */
 function addToArray(id) {
-
-    // if not in "Colors" mode
-    if (!isColor) {
-        
+  
         // if in "Pencilmarks" mode and if the cell is not already a normal text input
         if (isNormal == false && document.getElementById(id).className != "txt-input") {
             pmInput(id);
@@ -652,7 +543,6 @@ function addToArray(id) {
             normalInput(id);
         }
     }
-}
 
 /**
  * Inputs the number that was selected from the numbers table
@@ -918,42 +808,6 @@ function selectDrag(id) {
             document.getElementById(curId).focus();
         }
 
-    }
-}
-
-/**
- * Sets the background color of the selected cells to the color chosen by the user in the "colorsTable"
- * @param {String} colorId  An id from the table input (color1, color2, etc.)
- */
-function setColor(colorId) {
-
-    // get the color that the user selected
-    var color = document.getElementById(colorId).style.backgroundColor;
-
-    // focus onto "curId" if it is valid
-    if (document.getElementById(curId) != null) {
-        document.getElementById(curId).focus();
-    }
-
-    // set the global variable "curentColor" to the selected colo
-    currentColor = color;
-
-    // loop through all 81 cells
-    for (var i = 0; i < 81; i++) {
-
-        // if the cell is in "selectArray"
-        if (selectArray[i]) {
-
-            // change the cell's background color and set the value in the "colorMap"
-            document.getElementById(i).style.backgroundColor = currentColor;
-            colorMap[i] = currentColor;
-        }
-    }
-
-    // if the active element is a cell, change its background color and set the value in the "colorMap"
-    if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
-        document.getElementById(document.activeElement.id).style.backgroundColor = currentColor;
-        colorMap[document.activeElement.id] = currentColor;
     }
 }
 
@@ -1473,11 +1327,6 @@ function changeTheme() {
             }
             
         }
-    }
-
-    // if "isColor", change the mode to "colors" to immediately see the table colors change
-    if (isColor) {
-        changeMode("colors");
     }
 
     // select all cells
