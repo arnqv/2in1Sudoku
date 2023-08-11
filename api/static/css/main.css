@@ -26,6 +26,7 @@
     --underlineColor: #ffffff;
     --hightlightColor:#ffffff;
     --opPreColor:#ffffff;
+    --opFocusedColor: white;
 }
 
 html {

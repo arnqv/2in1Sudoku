@@ -368,6 +368,8 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
+        document.getElementById("pencilmarks").backgroundColor = "var(--opFocusedColor)";
+        document.getElementById("normal").backgroundColor = "var(--opPreColor)";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -380,6 +382,8 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
+        document.getElementById("normal").backgroundColor = "var(--opFocusedColor)";
+        document.getElementById("pencilmarks").backgroundColor = "var(--opPreColor)";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -966,6 +970,7 @@ function toggleHighlightNums() {
         // change the class name of the highlighnums div to indicate that it has been turned off
         document.getElementById("highlightnums").className = "opbutton";
         document.getElementById("highlightnums").innerHTML = "Highlight Same Digits";
+        document.getElementById("highlightnums").backgroundColor = "var(--opPreColor)";
         
         // loop through all 81 cells and unhighlight each cell
         for (var i = 0; i < 81; i++) {
@@ -988,6 +993,8 @@ function toggleHighlightNums() {
 
         // change the class name of the highlighnums div to indicate that it has been turned on
         document.getElementById("highlightnums").innerHTML = "Remove Highlights";
+        document.getElementById("highlightnums").backgroundColor = "var(--opFocusedColor)";
+
         // call highlightNums() to see immediate highlighting 
         highlightNums();
     }
@@ -1119,6 +1126,7 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "white");
         root.style.setProperty('--underlineColor', "white");
         root.style.setProperty('--opPreColor', "rgba(255, 255, 255, 0.8)");
+        root.style.setProperty('--opFocusedColor', "rgba(130, 129, 129, 0.8)");
 
         window.localStorage.setItem("storedTheme", "white");
 
@@ -1148,6 +1156,7 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "#8cff8a");
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
         root.style.setProperty('--opPreColor', "rgba(140, 255, 138, 0.8)");
+        root.style.setProperty('--opFocusedColor', "rgba(0, 158, 0, 0.8)");
 
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
@@ -1177,6 +1186,7 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "rgba(250, 124, 115)");
         root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
         root.style.setProperty('--opPreColor', "rgba(250, 124, 115, 0.8)");
+        root.style.setProperty('--opFocusedColor', "rgba(252, 0, 0, 0.8)");
 
 
         window.localStorage.setItem("storedTheme", "red");
@@ -1206,6 +1216,7 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "rgba(120, 140, 255)");
         root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
         root.style.setProperty('--opPreColor', "rgba(120, 140, 255, 0.8)");
+        root.style.setProperty('--opFocusedColor', "rgba(0, 50, 252, 0.8)");
 
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
