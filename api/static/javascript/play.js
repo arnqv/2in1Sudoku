@@ -949,7 +949,7 @@ function toggleHighlightNums() {
 
         // change the class name of the highlighnums div to indicate that it has been turned off
         document.getElementById("highlightnums").className = "opbutton";
-        document.getElementById("highlightnums").innerHTML = "Remove Highlights";
+        document.getElementById("highlightnums").innerHTML = "Highlight Same Digits";
         
         // loop through all 81 cells and unhighlight each cell
         for (var i = 0; i < 81; i++) {
@@ -971,7 +971,7 @@ function toggleHighlightNums() {
         isHighlightNums = true;
 
         // change the class name of the highlighnums div to indicate that it has been turned on
-        document.getElementById("highlightnums").innerHTML = "Highlight Same Digits";
+        document.getElementById("highlightnums").innerHTML = "Remove Highlights";
         // call highlightNums() to see immediate highlighting 
         highlightNums();
     }
