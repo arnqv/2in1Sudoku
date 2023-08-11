@@ -154,7 +154,7 @@ div#instructionsdisplay, div#aboutdisplay, div#menuinstructionsdisplay, div#menu
     background-color: black;
     text-align: left;
     overflow: hidden;
-    margin-bottom: 2.5px;
+    margin-bottom: 2px;
     display: none;
     width: 447px;
 }
