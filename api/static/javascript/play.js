@@ -366,8 +366,8 @@ function changeMode(modeId) {
         isNormal = false;
 
         // change the class name of the mode div to make it appear focused
-        document.getElementById("pencilmarks").className = "modefocus";
-        document.getElementById("normal").className = "modedivs";
+        document.getElementById("pencilmarks").className = "opbutton";
+        document.getElementById("normal").className = "opbutton";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
