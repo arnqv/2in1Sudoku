@@ -1553,6 +1553,24 @@ function startTimer() {
 }
 
 /**
+ * Pauses the time of user
+ */
+function pauseTimer() {
+    if (solved != "True") {
+        timer = setInterval(tick, 0);
+    }
+}
+
+/**
+ * Pauses the time of user
+ */
+function playTimer() {
+    if (solved != "True") {
+        timer = setInterval(tick, 1000);
+    }
+}
+
+/**
  * Validates the form when the user clicks "Check"
  * @return {boolean}  True if the form passes all validation; false otherwise
  */
@@ -1772,12 +1790,12 @@ function pauseDisplay() {
         document.getElementById("grid-container").style.display = "grid";
     }
 
-    
-    // display "Instructions" message
+    // display "Pause/Play" message
     if (showPause) {
         document.getElementById("instructionsdisplay").style.display = "block";
         document.getElementById("grid-container").style.display = "none";
         showPause = false;
+        pauseTimer()
     }
 
     // close "Pause/Play" display
@@ -1785,5 +1803,6 @@ function pauseDisplay() {
         document.getElementById("instructionsdisplay").style.display = "none";
         document.getElementById("grid-container").style.display = "grid";
         showPause = true;
+        playTimer()
     }
 }
