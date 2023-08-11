@@ -1087,7 +1087,6 @@ function revertChangeTheme() {
  * Changes theme based on user specified selection
  */
 function changeTheme() {
-        oldThemeColorMap[i] = "";
 
     // obtain the theme in cache and assign it to "themeid"
     var themeid = window.localStorage.getItem("storedTheme");
