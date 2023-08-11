@@ -1,6 +1,3 @@
-// global variable (Map) that has keys from 0-80 and values of the color in each cell (value is "" if there is no color)
-var colorMap = {};
-
 // global variable (Array) that holds a 2D Array of the pencilmarks for each cell in the grid
 var pmArray = [];
 
@@ -237,13 +234,8 @@ $(document).keydown(
                 // if the cell is selected
                 if (selectArray[i]) {
 
-                    // if there is no color on that cell, set its background color back to the item background
-                    if (colorMap[i] == "") {
-                        document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-                    }
-                    else {
-                        document.getElementById(i).style.backgroundColor = colorMap[i];
-                    }
+                    document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
+
                     selectArray[i] = false;
                 }
             }
@@ -360,7 +352,6 @@ function createArray() {
     for (var i = 0; i < 81; i++) {
         pmArray[i] = [];
         selectArray[i] = false;
-        colorMap[i] = "";
     }
 }
 
@@ -745,17 +736,10 @@ function selectClick(id) {
             // if the cell is currently selected
             if (selectArray[i]) {
                 
-                // if no color is set for that cell
-                if (colorMap[i] == "") {
 
                     // change the background color to the normal item background
                     document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-                }
                 
-                // else revert that cell's background color to its value in the "colorMap"
-                else {
-                    document.getElementById(i).style.backgroundColor = colorMap[i];
-                }
                 
                 // deselect the cell
                 selectArray[i] = false;
@@ -1244,15 +1228,8 @@ function changeTheme() {
         // if the cell is selected
         if (selectArray[i]) {
 
-            // if there is no color in the cell, then set the background color to the default
-            if (colorMap[i] == "") {
                 document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-            }
-
-            // else set the color to the correct color based on the changed theme
-            else {
-                document.getElementById(i).style.backgroundColor = colorMap[i];
-            }
+            
 
             // deselect the cell
             selectArray[i] = false;
