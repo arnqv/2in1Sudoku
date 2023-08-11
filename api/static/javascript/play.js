@@ -1088,7 +1088,6 @@ function revertChangeTheme() {
  */
 function changeTheme() {
         oldThemeColorMap[i] = "";
-    }
 
     // obtain the theme in cache and assign it to "themeid"
     var themeid = window.localStorage.getItem("storedTheme");
@@ -1260,7 +1259,6 @@ function changeTheme() {
             selectArray[i] = false;
         }
     }
-
 }
 
 /**
