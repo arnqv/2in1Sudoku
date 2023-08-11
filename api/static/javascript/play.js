@@ -368,7 +368,7 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("pencilmarks").style.border = "solid white";
+        document.getElementById("pencilmarks").style.border = "2.5px solid white";
         document.getElementById("normal").style.border = "none";
 
         // change the table container to the numbers table, instead of the colors table
@@ -382,8 +382,8 @@ function changeMode(modeId) {
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "opbutton";
         document.getElementById("normal").className = "opbutton";
-        document.getElementById("normal").style.backgroundColor = "solid white";
-        document.getElementById("pencilmarks").style.backgroundColor = "none";
+        document.getElementById("normal").style.border = "2.5px solid white";
+        document.getElementById("pencilmarks").style.border = "none";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
@@ -659,6 +659,7 @@ function undo() {
 function fillAllPms() {
 
     changeMode("pencilmarks");
+    
 
     // set "isAutoFill" to true and start a new count of "autoFillCount"
     isAutoFill = true;
@@ -993,7 +994,7 @@ function toggleHighlightNums() {
 
         // change the class name of the highlighnums div to indicate that it has been turned on
         document.getElementById("highlightnums").innerHTML = "Remove Highlights";
-        document.getElementById("highlightnums").style.border = "solid white";
+        document.getElementById("highlightnums").style.border = "2.5px solid white";
 
         // call highlightNums() to see immediate highlighting 
         highlightNums();
