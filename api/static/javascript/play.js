@@ -1,3 +1,6 @@
+// global variable (Map) that has keys from 0-80 and values of the color in each cell (value is "" if there is no color)
+var colorMap = {};
+
 // global variable (Array) that holds a 2D Array of the pencilmarks for each cell in the grid
 var pmArray = [];
 
@@ -34,6 +37,9 @@ var drag = false;
 // global variable (boolean) for if the mode is "Normal" (true) or "Pencilmarks" (false)
 var isNormal = true;
 
+// global variable (boolean) for if the mode of "Colors" is on/off
+var isColor = false;
+
 // global variable (boolean) for if the option of automatically deleting pencilmarks is on/off
 var isDeletePms = false;
 
@@ -64,6 +70,17 @@ var root = document.documentElement;
 // global variable (boolean) that indicates if the current grid is solved
 var solved = $('#my-data').data().name;
 
+// global variables (String) that hold the CSS colors for different themes
+var color1 = root.style.getPropertyValue('--color1');
+var color2 = root.style.getPropertyValue('--color2');
+var color3 = root.style.getPropertyValue('--color3');
+var color4 = root.style.getPropertyValue('--color4');
+var color5 = root.style.getPropertyValue('--color5');
+var color6 = root.style.getPropertyValue('--color6');
+var color7 = root.style.getPropertyValue('--color7');
+var color8 = root.style.getPropertyValue('--color8');
+var color9 = root.style.getPropertyValue('--color9');
+
 // global variable (String) for the HTML table for inputting a number
 var numbersTable = `
     <table>
@@ -85,6 +102,28 @@ var numbersTable = `
     </table>
 `;
 
+// global variable (String) for the HTML table for adding a color
+var colorsTable = `
+    <table>
+        <tr>
+            <td><button type="button" id="color1" class="colors" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color2" class="colors" style="background-color: color2;" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color3" class="colors" style="background-color: color3;" type="button" onclick="setColor(this.id)"> </button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="color4" class="colors" style="background-color: color4;" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color5" class="colors" tyle="background-color: color5;" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color6" class="colors" style="background-color: color6;" type="button" onclick="setColor(this.id)"> </button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="color7" class="colors" style="background-color: color7;" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color8" class="colors" style="background-color: color8;" type="button" onclick="setColor(this.id)"> </button></td>
+            <td><button type="button" id="color9" class="colors" style="background-color: color9;" type="button" onclick="setColor(this.id)"> </button></td>
+        </tr>
+    </table>
+`;
+
+
 $(document).keydown(
     /**
     * Event handling function for the keydown event 
@@ -95,7 +134,34 @@ $(document).keydown(
         // true if one of the arrow keys is pressed; false otherwise
         var arrowKeyPressed = false;
 
+        // if in "Colors" mode, prevent "Normal" or "Pencilmarks" numbers from being inputted and use the numbers as colors instead
+        if (isColor && e.keyCode >= 49 && e.keyCode <= 57) {
+            var inter = "color" + (e.keyCode - 48).toString();
 
+            // loop through all 81 cells
+            for (var i = 0; i < 81; i++) {
+
+                // if the cell is selected
+                if (selectArray[i]) {
+
+                    // get the current color and set the value of "colorMap" to that color
+                    currentColor = root.style.getPropertyValue('--' + inter);
+                    colorMap[i] = currentColor;
+
+                    // set the background color of the cell
+                    document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--' + inter);
+                }
+            }
+
+            // if the active element is a cell, change its background color to the corresponding color
+            if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
+                document.getElementById(document.activeElement.id).style.backgroundColor = root.style.getPropertyValue('--' + inter);
+            }
+
+            // prevent the user from inputting a number if in the "Colors" mode
+            e.preventDefault();
+        }
+        
         // if the active element is one of the 81 cells
         if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
 
@@ -234,8 +300,13 @@ $(document).keydown(
                 // if the cell is selected
                 if (selectArray[i]) {
 
-                    document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-
+                    // if there is no color on that cell, set its background color back to the item background
+                    if (colorMap[i] == "") {
+                        document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
+                    }
+                    else {
+                        document.getElementById(i).style.backgroundColor = colorMap[i];
+                    }
                     selectArray[i] = false;
                 }
             }
@@ -245,10 +316,13 @@ $(document).keydown(
         else if (e.keyCode == 32) {
 
             // change modes between "Normal", "Pencilmarks", and "Colors" in order
-            if (isNormal) {
+            if (isNormal && !isColor) {
                 changeMode("pencilmarks");
             }
-            else if (!isNormal) {
+            else if (!isNormal && !isColor) {
+                changeMode("colors");
+            }
+            else if (isColor && !isNormal) {
                 changeMode("normal");
             }
         }
@@ -352,6 +426,7 @@ function createArray() {
     for (var i = 0; i < 81; i++) {
         pmArray[i] = [];
         selectArray[i] = false;
+        colorMap[i] = "";
     }
 }
 
@@ -362,18 +437,69 @@ function createArray() {
 function changeMode(modeId) {
     if (modeId == "pencilmarks") {
 
-        // change the mode to "Pencilmarks" and not "Normal"
+        // change the mode to "Pencilmarks" and not "Normal" or "Colors"
         isNormal = false;
+        isColor = false;
 
         // change the class name of the mode div to make it appear focused
         document.getElementById("pencilmarks").className = "modefocus";
         document.getElementById("normal").className = "modedivs";
+        document.getElementById("colors").className = "modedivs";
 
         // change the table container to the numbers table, instead of the colors table
         document.getElementById("tablecontainer").innerHTML = numbersTable;
 
     }
 
+    else if (modeId == "colors") {
+
+        // change the mode to "Colors" and not "Normal" or "Pencilmarks"
+        isColor = true;
+        isNormal = false;
+
+        // change the class name of the mode div to make it appear focused
+        document.getElementById("colors").className = "modefocus";
+        document.getElementById("pencilmarks").className = "modedivs";
+        document.getElementById("normal").className = "modedivs";
+
+        // change the table container to the colors table, instead of the numbers table
+        document.getElementById("tablecontainer").innerHTML = colorsTable;
+
+        // set the background color of the buttons in the colors table to the appropriate CSS variable for that theme
+        document.getElementById("color1").style.backgroundColor = root.style.getPropertyValue("--color1");
+        document.getElementById("color2").style.backgroundColor = root.style.getPropertyValue("--color2");
+        document.getElementById("color3").style.backgroundColor = root.style.getPropertyValue("--color3");
+        document.getElementById("color4").style.backgroundColor = root.style.getPropertyValue("--color4");
+        document.getElementById("color5").style.backgroundColor = root.style.getPropertyValue("--color5");
+        document.getElementById("color6").style.backgroundColor = root.style.getPropertyValue("--color6");
+        document.getElementById("color7").style.backgroundColor = root.style.getPropertyValue("--color7");
+        document.getElementById("color8").style.backgroundColor = root.style.getPropertyValue("--color8");
+        document.getElementById("color9").style.backgroundColor = root.style.getPropertyValue("--color9");
+    }
+    
+    else {
+        // change the mode to "Normal" and not "Colors" or "Pencilmarks"
+        isNormal = true;
+        isColor = false;
+
+        // change the class name of the mode div to make it appear focused
+        document.getElementById("pencilmarks").className = "modedivs";
+        document.getElementById("normal").className = "modefocus";
+        document.getElementById("colors").className = "modedivs";
+
+        // change the table container to the numbers table, instead of the colors table
+        document.getElementById("tablecontainer").innerHTML = numbersTable;
+    }
+
+    // if in "Normal" or "Pencilmarks" mode, call changeClassName
+    if (!isColor) {
+        changeClassName();
+    }
+
+    // after changing modes, focus back on to the last valid grid item
+    if (document.getElementById(curId) != null) {
+        document.getElementById(curId).focus();
+    }
 }
 
 /**
@@ -512,7 +638,10 @@ function normalInput(id) {
  * @param {String} id  An id from 0-80 that maps to a specific cell in the grid
  */
 function addToArray(id) {
-  
+
+    // if not in "Colors" mode
+    if (!isColor) {
+        
         // if in "Pencilmarks" mode and if the cell is not already a normal text input
         if (isNormal == false && document.getElementById(id).className != "txt-input") {
             pmInput(id);
@@ -523,6 +652,7 @@ function addToArray(id) {
             normalInput(id);
         }
     }
+}
 
 /**
  * Inputs the number that was selected from the numbers table
@@ -736,10 +866,17 @@ function selectClick(id) {
             // if the cell is currently selected
             if (selectArray[i]) {
                 
+                // if no color is set for that cell
+                if (colorMap[i] == "") {
 
                     // change the background color to the normal item background
                     document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
+                }
                 
+                // else revert that cell's background color to its value in the "colorMap"
+                else {
+                    document.getElementById(i).style.backgroundColor = colorMap[i];
+                }
                 
                 // deselect the cell
                 selectArray[i] = false;
@@ -781,6 +918,42 @@ function selectDrag(id) {
             document.getElementById(curId).focus();
         }
 
+    }
+}
+
+/**
+ * Sets the background color of the selected cells to the color chosen by the user in the "colorsTable"
+ * @param {String} colorId  An id from the table input (color1, color2, etc.)
+ */
+function setColor(colorId) {
+
+    // get the color that the user selected
+    var color = document.getElementById(colorId).style.backgroundColor;
+
+    // focus onto "curId" if it is valid
+    if (document.getElementById(curId) != null) {
+        document.getElementById(curId).focus();
+    }
+
+    // set the global variable "curentColor" to the selected colo
+    currentColor = color;
+
+    // loop through all 81 cells
+    for (var i = 0; i < 81; i++) {
+
+        // if the cell is in "selectArray"
+        if (selectArray[i]) {
+
+            // change the cell's background color and set the value in the "colorMap"
+            document.getElementById(i).style.backgroundColor = currentColor;
+            colorMap[i] = currentColor;
+        }
+    }
+
+    // if the active element is a cell, change its background color and set the value in the "colorMap"
+    if (document.activeElement.id != "" && document.activeElement.id >= 0 && document.activeElement.id < 81) {
+        document.getElementById(document.activeElement.id).style.backgroundColor = currentColor;
+        colorMap[document.activeElement.id] = currentColor;
     }
 }
 
@@ -1072,6 +1245,34 @@ function revertChangeTheme() {
  */
 function changeTheme() {
 
+    // if grid contains colors, obtain the position and color and store it in a map named "oldThemeColorMap"
+    var oldThemeColorMap = {};
+
+    // loop through all 81 cells
+    for (var i = 0; i < 81; i++) {
+        
+        // if a color exists in the cell position
+        if (colorMap[i] != "" && colorMap[i] != undefined && colorMap[i] != null) {
+
+            // loop through all 9 colors
+            for (var j = 1; j < 10; j++) {
+                
+                var val = root.style.getPropertyValue('--color' + j);
+                
+                // if the color matches with the cell position, add it to "oldthemColorMap" along with its position
+                if (val.includes(colorMap[i])) {
+                    oldThemeColorMap[i] = "color" + j;
+                    break;
+                }
+
+                // else set the position to in the map to "", indicating that there is no color at that position
+                else {
+                    oldThemeColorMap[i] = "";
+                }
+            }
+        }
+    }
+
     // obtain the theme in cache and assign it to "themeid"
     var themeid = window.localStorage.getItem("storedTheme");
 
@@ -1104,6 +1305,17 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "white");
         root.style.setProperty('--opPreColor', "rgba(255, 255, 255, 0.8)");
 
+        // change table colors
+        root.style.setProperty('--color1', "#0a0a0a");
+        root.style.setProperty('--color2', "#0a0a0a");
+        root.style.setProperty('--color3', "#0a0a0a");
+        root.style.setProperty('--color4', "#0a0a0a");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#0a0a0a");
+        root.style.setProperty('--color7', "#0a0a0a");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
+
         window.localStorage.setItem("storedTheme", "white");
 
     }
@@ -1132,6 +1344,17 @@ function changeTheme() {
         root.style.setProperty('--bodyTextColor', "#8cff8a");
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
         root.style.setProperty('--opPreColor', "rgba(140, 255, 138, 0.8)");
+
+        // change table colors
+        root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
+        root.style.setProperty('--color2', "rgba(209, 255, 219)");
+        root.style.setProperty('--color3', "rgba(209, 255, 219)");
+        root.style.setProperty('--color4', "rgba(209, 255, 219)");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "rgba(209, 255, 219)");
+        root.style.setProperty('--color7', "rgba(209, 255, 219)");
+        root.style.setProperty('--color8', "rgba(209, 255, 219)");
+        root.style.setProperty('--color9', "rgba(209, 255, 219)");
 
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
@@ -1162,6 +1385,17 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
         root.style.setProperty('--opPreColor', "rgba(250, 124, 115, 0.8)");
 
+        // change table colors
+        root.style.setProperty('--color1', "#FFCCCC");
+        root.style.setProperty('--color2', "lightsalmon");
+        root.style.setProperty('--color3', "#99FF99");
+        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#99CCFF");
+        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
+
 
         window.localStorage.setItem("storedTheme", "red");
     }
@@ -1191,6 +1425,17 @@ function changeTheme() {
         root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
         root.style.setProperty('--opPreColor', "rgba(120, 140, 255, 0.8)");
 
+        // change table colors
+        root.style.setProperty('--color1', "#FF9999");
+        root.style.setProperty('--color2', "lightsalmon");
+        root.style.setProperty('--color3', "#99FF99");
+        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#99CCFF");
+        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
+
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
     }
@@ -1214,6 +1459,27 @@ function changeTheme() {
 
     }
 
+    // loop through all cells
+    for (var i = 0; i < 81; i++) {
+
+        // if there is a color in the cell position
+        if (oldThemeColorMap[i] != "" && oldThemeColorMap[i] != undefined && oldThemeColorMap[i] != null) {
+            
+            // loop through all 9 colors and change the color based on the changed theme
+            for (var j = 1; j < 10; j++) {
+                if (oldThemeColorMap[i].includes(j)) {
+                    colorMap[i] = root.style.getPropertyValue('--color' + j);
+                }
+            }
+            
+        }
+    }
+
+    // if "isColor", change the mode to "colors" to immediately see the table colors change
+    if (isColor) {
+        changeMode("colors");
+    }
+
     // select all cells
     for (var i = 0; i < 81; i++) {
         selectArray[i] = true;
@@ -1228,13 +1494,21 @@ function changeTheme() {
         // if the cell is selected
         if (selectArray[i]) {
 
+            // if there is no color in the cell, then set the background color to the default
+            if (colorMap[i] == "") {
                 document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-            
+            }
+
+            // else set the color to the correct color based on the changed theme
+            else {
+                document.getElementById(i).style.backgroundColor = colorMap[i];
+            }
 
             // deselect the cell
             selectArray[i] = false;
         }
     }
+
 }
 
 /**
