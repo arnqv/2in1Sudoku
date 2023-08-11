@@ -342,22 +342,21 @@ table {
     margin: auto;
     text-align: center;
     padding: 5px;
-    background-color: var(--tableColor);
-    /* margin-bottom: 20px; */
+    background-color: black;
     border-radius: 15px;
+    border: 2px solid var(--primaryColor);
     height: 175px;
 }
 button.colors {
     width: 45px;
     height: 45px;
-    border-radius: 10px;
     border: 2px solid var(--primaryColor);
-    box-shadow: 1px 2px var(--primaryColor);
+    box-shadow: 1px 2px var(--primaryColor);;
     font-size: 18px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: var(--readOnlyColor);
-    background-color: var(--tableItemBackground);
+    color: white;
+    background-color: var(--opPreColor);
     cursor: pointer;
     outline: none;
 }
