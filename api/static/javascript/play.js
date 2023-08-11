@@ -1772,6 +1772,7 @@ function pauseDisplay() {
         document.getElementById("grid-container").style.display = "grid";
     }
 
+    
     // display "Instructions" message
     if (showPause) {
         document.getElementById("instructionsdisplay").style.display = "block";
