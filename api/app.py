@@ -75,7 +75,7 @@ def play():
             elif request.form.get('hard') != None:
                 content = request.form.get('hard')
             else:
-                content = request.form.get('expert')
+                content = request.form.get('insane')
             
             # if a Sudoku hasn't already been generated, create one of the specified difficulty
             if not has_gen:
