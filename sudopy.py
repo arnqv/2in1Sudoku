@@ -230,7 +230,7 @@ class Generate:
         Initializes a Generate object with a difficulty_level attribute
 
         Parameter:
-        String: specified difficulty (either "easy", "medium", "hard", or "expert")
+        String: specified difficulty (either "easy", "medium", "hard", or "insane")
         """
         self.difficulty_level = difficulty_level
 
