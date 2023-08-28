@@ -237,46 +237,6 @@ function changeTheme() {
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
     }
-
-    // if "curId" is valid
-    if (curId != null) {
-
-        // focus onto "curId"
-        document.getElementById(curId).focus();
-        
-        // if the highlightRcb toggle is on, call it
-        if (isHighlightRcb) {
-            highlightRcb();
-        }
-
-         // if the highlightNums toggle is on, call it
-        if (isHighlightNums) {
-            highlightNums();
-        }
-
-    }
-
-    // select all cells
-    for (var i = 0; i < 81; i++) {
-        selectArray[i] = true;
-    }
-    
-    // indicate that selecting has finished
-    isSelectMultiple = false;
-    
-    // loop through all 81 cells
-    for (var i = 0; i < 81; i++) {
-
-        // if the cell is selected
-        if (selectArray[i]) {
-
-                document.getElementById(i).style.backgroundColor = root.style.getPropertyValue('--itemBackground');
-            
-
-            // deselect the cell
-            selectArray[i] = false;
-        }
-    }
 }
 
 /**
