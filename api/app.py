@@ -21,6 +21,10 @@ def menu():
 def input_solve():
     return render_template('input_solveown.html')
 
+@app.route('/solveown_solve')
+def input_solve():
+    return render_template('solveown_solve.html')
+
 
 @app.route('/play', methods=['POST', 'GET'])
 def play():
