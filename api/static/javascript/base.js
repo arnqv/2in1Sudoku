@@ -102,7 +102,7 @@ function themeOption() {
  */
 function revertChangeTheme() {
     document.getElementById("changetheme").innerHTML = `
-    <div onclick="themeOption()">Change Theme</div>`;
+    <div id="themebutton" onclick="themeOption()">Change Theme</div>`;
 }
 
 
