@@ -18,7 +18,7 @@ def menu():
     return render_template('menu.html')
 
 @app.route('/input_solveown')
-def input_solve():
+def input_play():
     return render_template('input_solveown.html')
 
 @app.route('/solveown_solve')
