@@ -72,7 +72,7 @@ def play():
                 content = request.form.get('easy')
             elif request.form.get('medium') != None:
                 content = request.form.get('medium')
-            elif request.form.get('hard') != None:
+            elif request.form.get(' ') != None:
                 content = request.form.get('hard')
             else:
                 content = request.form.get('insane')
