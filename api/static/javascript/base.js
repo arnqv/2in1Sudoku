@@ -114,13 +114,9 @@ function changeTheme() {
     // obtain the theme in cache and assign it to "themeid"
     var themeid = window.localStorage.getItem("storedTheme");
 
-    // reset the shift indicator
-    document.getElementById("shiftIndication").style = "background-color: none";
-
-    // if theme is white
+    // if the desired theme change is "white", change CSS variables to the corresponding color palette
     if (themeid == "white") {
 
-        // change document CSS colors
         root.style.setProperty('--primaryColor', "rgba(130, 129, 129)"); //board line color
         root.style.setProperty('--itemBackground',"rgba(0, 0, 0)"); //square color
         root.style.setProperty('--textColor', "#f6f0e8"); 
@@ -130,7 +126,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#808080");
         root.style.setProperty('--buttonBackground', "#808080");
         root.style.setProperty('--buttonText', "#0a0a0a");
-        root.style.setProperty('--highlightColor', "rgba(129, 133, 129)");
+        root.style.setProperty('--shiftColor', "#0a0a0a");
         root.style.setProperty('--messageTextColor', "#0a0a0a");
         root.style.setProperty('--focusText', "#808080");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -141,14 +137,24 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "#7f7f7f;");
         root.style.setProperty('--bodyTextColor', "white");
         root.style.setProperty('--underlineColor', "white");
-        root.style.setProperty('--opPreColor', "rgba(255, 255, 255, 0.8)");
-        root.style.setProperty('--opFocusedColor', "rgba(130, 129, 129, 0.8)");
 
+        // change table colors
+        root.style.setProperty('--color1', "#f6f0e8");
+        root.style.setProperty('--color2', "lightsalmon");
+        root.style.setProperty('--color3', "#99FF99");
+        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#99CCFF");
+        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
+
+        // store the theme "white" in local cache
         window.localStorage.setItem("storedTheme", "white");
 
     }
 
-    // if theme is green
+    // else if the desired theme change is "dark", change CSS variables to the corresponding color palette
     else if (themeid == "cybergreen") {
 
         root.style.setProperty('--primaryColor', "rgba(0, 158, 0)"); //board line color
@@ -160,7 +166,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#a1c4db");
         root.style.setProperty('--buttonBackground', "#4f4f4f");
         root.style.setProperty('--buttonText', "#04f700");
-        root.style.setProperty('--highlightColor', "rgba(17, 128, 0)");
+        root.style.setProperty('--shiftColor', "#6f818a");
         root.style.setProperty('--messageTextColor', "#bbe1fa");
         root.style.setProperty('--focusText', "#226897");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -171,13 +177,23 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "#8cff8a");
         root.style.setProperty('--bodyTextColor', "#8cff8a");
         root.style.setProperty('--underlineColor', "rgba(0, 255, 0, 0.7)");
-        root.style.setProperty('--opPreColor', "rgba(140, 255, 138, 0.8)");
-        root.style.setProperty('--opFocusedColor', "rgba(0, 158, 0, 0.8)");
 
+        //Change table colors
+        root.style.setProperty('--color1', "rgba(209, 255, 219)") //lets see
+        root.style.setProperty('--color2', "rgba(209, 255, 219)");
+        root.style.setProperty('--color3', "rgba(209, 255, 219)");
+        root.style.setProperty('--color4', "rgba(209, 255, 219)");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "rgba(209, 255, 219)");
+        root.style.setProperty('--color7', "rgba(209, 255, 219)");
+        root.style.setProperty('--color8', "rgba(209, 255, 219)");
+        root.style.setProperty('--color9', "rgba(209, 255, 219)");
+
+        // store the theme "dark" in local cache
         window.localStorage.setItem("storedTheme", "cybergreen");
     }
-    
-    // if theme is red
+
+    // else if the desired theme change is "retro", change CSS variables to the corresponding color palette
     else if (themeid == "red") {
 
         // change document CSS colors
@@ -190,7 +206,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#f2f4f7");
         root.style.setProperty('--buttonBackground', "#e43a19");
         root.style.setProperty('--buttonText', "#020205");
-        root.style.setProperty('--highlightColor', "rgba(232, 93, 0)");
+        root.style.setProperty('--shiftColor', "#fce17a");
         root.style.setProperty('--messageTextColor', "#f6f0e8");
         root.style.setProperty('--focusText', "#F3ECE7");
         root.style.setProperty('--highlightOpacity', "brightness(75%)");
@@ -201,10 +217,19 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "rgba(250, 124, 115)");
         root.style.setProperty('--bodyTextColor', "rgba(250, 124, 115)");
         root.style.setProperty('--underlineColor', "rgba(255, 17, 0)");
-        root.style.setProperty('--opPreColor', "rgba(250, 124, 115, 0.8)");
-        root.style.setProperty('--opFocusedColor', "rgba(252, 0, 0, 0.8)");
 
+        // change table colors
+        root.style.setProperty('--color1', "#FFCCCC");
+        root.style.setProperty('--color2', "lightsalmon");
+        root.style.setProperty('--color3', "#99FF99");
+        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#99CCFF");
+        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
 
+        // store the theme "retro" in local cache
         window.localStorage.setItem("storedTheme", "red");
     }
 
@@ -220,7 +245,7 @@ function changeTheme() {
         root.style.setProperty('--tableItemBackground', "#62a7a1");
         root.style.setProperty('--buttonBackground', "#4db492");
         root.style.setProperty('--buttonText', "#d2fff0");
-        root.style.setProperty('--highlightColor', "rgba(159, 33, 255)");
+        root.style.setProperty('--shiftColor', "#fce17a");
         root.style.setProperty('--messageTextColor', "#1b4857");
         root.style.setProperty('--focusText', "#28595c");
         root.style.setProperty('--highlightOpacity', "brightness(90%)");
@@ -231,8 +256,20 @@ function changeTheme() {
         root.style.setProperty('--lighterButtonColor', "rgba(120, 140, 255)");
         root.style.setProperty('--bodyTextColor', "rgba(120, 140, 255)");
         root.style.setProperty('--underlineColor', "rgba(5, 43, 255)");
-        root.style.setProperty('--opPreColor', "rgba(120, 140, 255, 0.8)");
-        root.style.setProperty('--opFocusedColor', "rgba(0, 50, 252, 0.8)");
+
+        // change table colors
+        root.style.setProperty('--color1', "#FF9999");
+        root.style.setProperty('--color2', "lightsalmon");
+        root.style.setProperty('--color3', "#99FF99");
+        root.style.setProperty('--color4', "#99FFFF");
+        root.style.setProperty('--color5', root.style.getPropertyValue('--itemBackground'));
+        root.style.setProperty('--color6', "#99CCFF");
+        root.style.setProperty('--color7', "#CC99FF");
+        root.style.setProperty('--color8', "lightsteelblue");
+        root.style.setProperty('--color9', "#FF99CC");
+
+        // change home icon color
+        document.getElementById("homesquare").style.backgroundImage = "url(/static/css/images/homeLight.png)";
 
         // store the theme "light" in local cache
         window.localStorage.setItem("storedTheme", "blue");
