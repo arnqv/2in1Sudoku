@@ -34,7 +34,7 @@ def play():
     if request.method == 'POST':
 
         # if the POST request is from '/input_play' or '/play'
-        if '/play' in request.referrer:
+        if '/input_solveown' in request.referrer:
 
             # build 2D list in order to initialize Sudoku object
             for i in range(9):
